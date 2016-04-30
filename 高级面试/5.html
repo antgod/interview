@@ -1,0 +1,18 @@
+<body>aaaaaaaaaa</body>
+<script>
+var fn=(function(){
+    var flag=true;
+    function fn(next){
+        if(flag){              
+            document.body.addEventListener("click",function(){
+                console.log(flag);
+            },false);
+        }
+        flag=false;
+    }
+    return fn;
+})();
+
+fn();
+fn();
+</script>

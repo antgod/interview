@@ -1,0 +1,9 @@
+var i=1,n=100;
+while(i<n){
+	i=i*2
+	console.log(n);
+}
+
+
+//2^m=n£¬µÃµ½m=log2n¡£
+

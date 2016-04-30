@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>3px</title>
+		<style>
+			.left{width:100px;height:100px;background:Red; float:left;}
+			.right{width:200px;height:100px;background:blue;margin-left:100px;}
+			/*
+				ie6,7下，如果子元素只有一个浮动，会出现3像素bug
+				解决方法：所有元素都加上浮动
+			*/
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="left"></div>
+		    <div class="right"></div>
+		</div>
+	</body>
+</html>

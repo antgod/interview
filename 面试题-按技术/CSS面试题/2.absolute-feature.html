@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>absolute-feature</title>
+		<style>
+			body{border:1px solid black;}
+			/* 
+				body < html  < 文档
+			 */
+			
+			.box1{width:300px;height:300px; background:red; position:relative;}
+			.box2{width:200px;height:200px;background:blue;}
+			.box3{width:100px;height:100px;background:green; position:absolute;right:0;bottom:0;}
+			/* 
+				position:absolute;  绝对定位
+				a、使元素完全脱离文档流；
+				b、使内嵌支持宽高；
+				c、块属性标签内容撑开宽度；
+				d、如果有定位父级相对于定位父级发生偏移，没有定位父级相对于整个文档发生偏移；
+				e、相对定位一般都是配合绝对定位元素使用；
+			 */
+		</style>
+	</head>
+
+	<body>
+		<div class="box1"><!-- 定位父级 -->
+			<div class="box2"><!-- 结构父级 -->
+                <span class="box3"></span><!-- 绝对定位元素 -->
+            </div>
+        </div>
+	</body>
+</html>

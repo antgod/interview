@@ -1,0 +1,11 @@
+<iframe id="c_iframe"  height="0" width="0"  src="http://www.a.com/c.htm" style="display:none" ></iframe>
+<script type="text/javascript">
+        var b_width = Math.max(document.documentElement.clientWidth,document.body.clientWidth);
+        var b_height = Math.max(document.documentElement.clientHeight,document.body.clientHeight);
+        console.log(b_width);
+        var c_iframe = document.getElementById("c_iframe");
+        console.log(c_iframe.src);
+        c_iframe.src = c_iframe.src + "#" + b_width + "|" + b_height;  // 这里通过hash传递b.htm的宽高
+        /* http://www.b.com/c.html#width|height */
+
+</script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>interview-scroll-img</title>
+	<style type="text/css">
+		ul{margin: 0;padding:0;overflow: hidden;width: 500px;position: relative;left:0;}
+		li{list-style: none;float: left;}
+		img{border: 0;width:100px;height:100px;}
+		button{width:35px;height:100px;}
+		.wrap div{float: left;}
+		.imgdiv{width:200px;overflow: hidden;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var left=document.getElementById("leftBtn");
+			var right=document.getElementById("rightBtn");
+			var img=document.getElementById("img");
+			var ul=document.getElementById("imgs");
+			
+			var imgDiv=document.getElementById("imgDiv");
+			var imgCount=ul.children.length;
+			var imgWidth=parseInt(getStyle(img,"width").replace("px",""));
+			var imgDivWidth=parseInt(getStyle(imgDiv,"width").replace("px",""));
+			
+			var leftWidth=imgDivWidth-imgCount*imgWidth;
+						
+			
+			left.onclick=function(){
+				right.disabled=false;
+				var left=parseInt(getStyle(ul,"left"));
+				
+				left=left-imgWidth;
+				if(left>=leftWidth){
+					ul.style.left=left+"px";
+				}else{
+					this.disabled=true;
+				}
+			}
+			
+			right.onclick=function(){
+				document.getElementById("leftBtn").disabled=false;
+				var left=parseInt(getStyle(ul,"left"));
+				left=left+imgWidth;
+				if(left<imgWidth){
+					ul.style.left=left+"px";
+				}else{[]
+					this.disabled=true;
+				}
+			}
+		}
+		
+		function getStyle(obj, attr){
+			if(obj.currentStyle){
+				return obj.currentStyle[attr];
+			}
+			else{
+				return getComputedStyle(obj, false)[attr];
+			}
+		}
+	</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div><button id="leftBtn">left</button></div>
+			<div class="imgdiv" id="imgDiv">
+				<ul id="imgs">
+					<li><img src="img/1.jpg" id="img"></li>
+					<li><img src="img/2.jpg"></li>
+					<li><img src="img/3.jpg"></li>
+					<li><img src="img/4.jpg"></li>
+				</ul>
+			</div>
+			<div><button id="rightBtn">right</button></div>
+		</div>
+	</body>
+</html>

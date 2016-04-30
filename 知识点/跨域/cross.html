@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>cross</title>
+		<!-- 	<script src="http://s1.bdstatic.com/r/www/cache/static/global/js/instant_search_newi_redirect_a4425c37.js"></script> -->
+		<script type="text/javascript">  
+	        function jsonp(result) {  
+ 	            //alert(result);  
+	            for(var i in result) {  
+ 	                alert(i+":"+result[i]);//循环输出a:1,b:2,etc.  
+ 	            }  
+ 	        }  
+	        var JSONP=document.createElement("script");  
+	        JSONP.type="text/javascript";  
+	        JSONP.src="b.js?callback=jsonp";  
+	        document.getElementsByTagName("head")[0].appendChild(JSONP);  
+		</script>  
+	</head>
+	<body>
+		<iframe src="c.html#a=1&b=2"></iframe>
+	</body>
+</html>

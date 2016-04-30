@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>interview2</title>
+	<script type="text/javascript">
+		function A(){}
+		A.prototype.x=10;				//a的原型链为A
+		var a = new A();
+		A.prototype.y=20;				//a的原型链为A
+		var b = new A();
+	
+		console.log(a.x, a.y);
+		console.log(b.x, b.y);
+		
+		A.prototype = {x : 10};			//a的原型链为Object:json
+		var c = new A();
+		A.prototype = {x : 10, y : 20};	//a的原型链为另一个Object:json
+		var d = new A();
+		
+		console.log(c.x, c.y);
+		console.log(d.x, d.y);
+		
+	</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

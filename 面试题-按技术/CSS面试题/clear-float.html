@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>clear-float</title>
+    <style>
+        #div1 {
+            border: 10px solid black;
+            margin: 0 auto;
+            /* 		float: left; */
+            /* 		display: inline-block; */
+        }
+
+        /*div2的左方向不能有浮动元素*/
+        #div2 {
+            width: 200px;
+            height: 200px;
+            background: red;
+            float: left;
+        }
+
+        #clear {
+            clear: both;
+            font-size: 0;
+            height: 0;
+        }
+
+        /*zoom:IE6,7放大，缩小,最常用的请浮动方法*/
+
+        /*父元素出发hasLayout属性*/
+        .clear {
+            zoom: 1
+        }
+
+        /*在父元素的子元素最后添加一个内容为空的textnode节点,这个节点双向清除浮动，并且为块级元素*/
+        .clear:after {
+            display: block;
+            clear: both;
+            content: ""
+        }
+
+        .overflow {
+            overflow: hidden;
+            zoom: 1
+        }
+
+        /*
+            清除浮动
+            1.父级加浮动：有很多bug,不实用
+            2.父级加display: inline-block;margin失效
+            3.浮动元素下方加div,加样式：clear:both,不符合W3C规范
+            4.浮动元素下方加<br clear="both"/>，不符合W3C规范
+            5.父级加样式：clear:after{display: block;clear: both;content: ""},IE6,7不支持，IE6，7下浮动元素父级有宽度不用清浮动，父级没宽度触发haslayout，加上样式.clear{zoom:1}触发haslayout
+            .clear{zoom:1}
+            .clear:after{display: block;clear: both;content: ""}
+            6.给父级加overflow:hidden,IE6下不兼容。.加样式overflow{overflow: hidden;zoom:1}
+            7.position:absolute; 绝对定位元素子级的浮动可以不用写清浮动方法；
+            8.position:fixed;  固定定位元素子级的浮动可以不用写清浮动方法；（IE6不兼容）
+        */
+    </style>
+</head>
+<body>
+<div id="div1" class="clear">
+    <div id="div2">div2</div>
+    <!-- 		<div id="clear"></div> -->
+    <!-- 		<br clear="both"/> -->
+</div>
+</body>
+</html>

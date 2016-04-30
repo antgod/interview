@@ -1,0 +1,11 @@
+
+性能优化，http请求过程，浏览器渲染原理，
+webspeed，dp性能统计平台，navigation timing	
+
+	
+
+跨域，jsonp，hash
+
+移动端：phonegap，字体:px,布局：百分比和固定像素没有严格要求。
+
+

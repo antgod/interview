@@ -1,0 +1,48 @@
+1.Promise并行异步处理方案
+
+2.ajax1与2的区别，http1.1和https，描述下ssl和长连接
+
+3.跨域的几种方法,post跨域怎么做，jsonp在js和jq实现有何区别？网络安全，access-crossing 和jsonp如何确保安全？
+flash跨域原理，h5如何跨域？iframe如何跨域？
+
+4.缓存与dns查找
+
+5.状态码与常见报文头，尽可能说出你知道的rest请求方式
+
+6.webwork,websocket
+
+	三种webworker的区别，如何与后端通信？
+
+	websocket用途是什么，优缺点？
+
+
+
+
+7.java,php,node
+说出这三种语言的发展趋势和区别，你更倾向于哪种语言？
+php反向代理与node cluster分别做什么用的？node服务器的nginx？
+
+8.node,你所用过的框架，简述jade和ejs优缺点对比。
+尽可能说出你知道的node模块和commonjs规范
+请阐述下node的事件机制与浏览器事件机制区别
+
+
+
+9.react react 优点，
+
+angular angular如何渲染，优点，依赖注入，为什么要实现依赖注入，好处是什么。双向数据绑定和单向数据绑定区别是什么？angular工程化优点。
+
+react 优缺点，react性能优点。页面内容改变如何改变js数据内容。
+
+react-native以及node如何做性能优化，react和angular性能优化以及渲染区别
+
+
+10.FIS的主要功能？（资源定位，资源合并与模块化）
+
+那么FIS如何实现资源定位和模块化(解释下resource-map以及mod原理）
+
+Webpack与gulp如何分工，实现webpack工程化应该注意哪些？
+10.gulp与grunt的区别，流原理，流切分文件
+
+
+

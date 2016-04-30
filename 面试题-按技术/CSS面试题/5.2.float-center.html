@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>页面元素的水平居中</title>
+    <style type="text/css">
+        /*这里也可以多套一层的方式设置left:-50%，更合理，也可以避免一些不必要的IE BUG。*/
+        /*这种float元素居中的方式其实可以延展应用到很多需要浮动元素又居中的情况。*/
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .clearfix:after {
+            content: "";
+            height: 0;
+            visibility: hidden;
+            display: block;
+            clear: both;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+
+        .inwrap {
+            float: left;
+            position: relative;
+            left: 50%;
+        }
+
+        .page {
+            float: left;
+            position: relative;
+            left: -50%;
+        }
+
+        .page li {
+            float: left;
+            margin: 0 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="inwrap">
+    <ul class="page">
+        <li><a href="#">上一页</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">下一页</a></li>
+    </ul>
+</div>
+</body>
+</html>  

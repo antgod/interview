@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>dom与js</title>
+		<script type="text/javascript">
+			//对于webkit内核浏览器，如chrome，dom比innerHTMl要快，其他innerHTML快
+			window.onload=function(){
+				var ul=document.createElement("ul");
+				var t1=new Date().getTime();
+				for(var i=0;i<5000;i++){
+					var li=document.createElement("li");
+					ul.appendChild(li);
+				}
+				var t2=new Date().getTime();
+				console.log("dom，耗时："+(t2-t1));
+				
+				var t1=new Date().getTime();
+				var str="";
+				for(var i=0;i<5000;i++){
+					str+="<li></li>";
+				}
+				ul.innerHTML=str;
+				var t2=new Date().getTime();
+				console.log("js，耗时："+(t2-t1));
+			}
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

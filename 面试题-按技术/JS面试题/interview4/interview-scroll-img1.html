@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>interview-scroll-img</title>
+	<style type="text/css">
+		li{list-style: none;float: left;}
+		img{border: 0;width:100px;height:100px;}
+		button{width:15px;height:100px;}
+		.wrap div{float: left;}
+		.photos_wrap{width:400px;overflow: hidden;}
+		.photos{margin: 0;padding:0;overflow: hidden;width: 500px;position: relative;left:0;}
+	</style>
+	<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+	
+	<script type="text/javascript">
+		$(function(){
+			
+			var leftBtn=$("#leftBtn");
+			var rightBtn=$("#rightBtn");
+			var photos=$(".photos");
+			
+			var imgs=$(".photos").find("li img");
+			
+			var datas=[];
+			imgs.each(function(i){
+				datas.push($(this).attr("src"));
+			});
+			
+			leftBtn.bind("click",function(ev){
+				rightBtn.removeAttr("disabled");
+				if(datas[0]!="img/4.jpg"){
+					datas.push(datas.shift());
+				}else{
+					leftBtn.attr("disabled","disabled");
+				}
+				
+				imgs.each(function(i){
+					$(this).attr("src",datas[i]);
+				});
+			});
+			
+			rightBtn.bind("click",function(ev){
+				leftBtn.removeAttr("disabled");
+				if(datas[datas.length-1]!="img/1.jpg"){
+					datas.unshift(datas.pop());
+				}else{
+					rightBtn.attr("disabled","disabled");
+				}
+				
+				imgs.each(function(i){
+					$(this).attr("src",datas[i]);
+				});
+			});
+			
+			$(document.body).bind("mousewheel",function(ev){
+				console.log(1);
+			});
+			
+		});
+	</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div><button id="leftBtn">l</button></div>
+			<div class="photos_wrap">
+				<ul class="photos">
+					<li><img src="img/1.jpg"></li>
+					<li><img src="img/2.jpg"></li>
+					<li><img src="img/3.jpg"></li>
+					<li><img src="img/4.jpg"></li>
+				</ul>
+			</div>
+			<div><button id="rightBtn">r</button></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var k=0;
+        var t=setInterval(function(){              //最后运行
+            k++;
+            alert("定时器运行");
+            if(k==1){
+                clearInterval(t);
+            }
+        },0);
+    </script>
+</head>
+<body>
+</body>
+<script>
+    function test() {
+        console.log("开始:"+Date.now());
+        for (var i = 0; i < 100000; i++) {
+            var div = document.createElement('div');
+            div.setAttribute('id', 'testDiv');
+            div.innerHTML=i;
+            document.body.appendChild(div);
+        }
+        console.log("结束:"+Date.now());
+    }
+
+    test();   //直接阻塞setInterval运行，两次setInterval会在test运行结束后运行
+    alert("页面弹出");   //先运行
+</script>
+</html>

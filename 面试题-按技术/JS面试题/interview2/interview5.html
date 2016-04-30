@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>interview5</title>
+	<script type="text/javascript">
+		var foo = {
+		    bar: function () {
+		       console.log(this);
+		    }
+		};
+		             
+		foo.bar();		//对象是foo
+		(foo.bar)();	//对象是foo
+		
+		(foo.bar = foo.bar)();	//赋值结果返回function () {console.log(this);}，直接调用，this为window
+		(foo.bar,foo.bar)();	//返回后面的函数体，调用对象是window
+	</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

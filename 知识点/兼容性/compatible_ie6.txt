@@ -1,0 +1,125 @@
+1.在IE6下，内容会撑开设置好的宽高,子元素会撑开父元素的已经设置好的宽度。
+解决办法：子元素宽度一定要精确计算。
+
+2.在IE6元素浮动，如果宽度需要内容撑开，就给里边的块元素都加浮动。子元素如果是块级元素，并且没有设置宽度，会撑开父元素为一整行。
+解决办法：子元素也加上浮动。
+
+3.在IE6下元素的高度的小于19px的时候，会被当做19px来处理
+解决办法:overflow:hidden;
+
+4.ie6,7下，如果子元素只有一个浮动，会出现3像素bug
+解决方法：所有元素都加上浮动
+
+5.注意嵌套规范，P标签不能嵌套块级标签
+
+6.1px dotted 在IE6下不支持
+解决办法:背景平铺
+
+7.在IE6下，块元素有浮动和横向margin的时候，横向的margin值会被放大成两倍
+解决办法:在被包含的元素加样式, display:inline;
+
+8.IE捉迷藏的问题     
+http://blog.csdn.net/bluesqsr/article/details/5911038
+ie6/hide/hide.html
+ 
+9.float的div闭合
+ 
+<div id="floatA"><div id="floatB" ><div id="NOTfloatC" >
+这里的NOTfloatC并不希望继续平移，而是希望往下排。(其中floatA、floatB的属性已经设置为 float:left;)  
+可是C与AB都在同一行，原因是NOTfloatC并非float标签，
+ 
+解决办法：必须将float标签闭合。在 <div class="floatB"><div class="NOTfloatC">之间加上 <div class="clear">
+这个div一定要注意位置，而且必须与两个具有float属性的div同级，之间不能存在嵌套关系，否则会产生异常。 
+并且将clear这种样式定义为为如下即可： .clear{ clear:both;}    
+
+10.作为外部 wrapper当包含float的 box的时候，高度自动适应在IE下无效，这时候应该触发IE的layout私有属性
+
+解决办法：用zoom:1;可以做到，这样就达到了兼容。    
+某一个wrapper如下定义： .wrapper{ overflow:hidden; zoom:1; margin:5px auto;}    
+
+11.clear float     
+当父元素包含浮动子元素，父元素会失去hasLayout属性，高度自动适应在IE下无效，此时应该出发父级的hasLayout属性，并且清空子级浮动。
+
+解决办法：给父元素添加clear样式
+/*父元素出发hasLayout属性*/
+.clear{zoom:1}
+/*在父元素的子元素最后添加一个内容为空的textnode节点,这个节点双向清除浮动，并且为块级元素*/
+.clear:after{display: block;clear: both;content: ""} 
+
+
+12 .IE6下为什么图片下有空隙产生  
+
+解决办法：
+设置img 为display:block  
+或者设置vertical-align为top | bottom |middle |text-bottom 都可以解决. 
+
+13.如何对齐文本与文本输入框  
+
+解决办法：加上 vertical-align:middle;  
+<style type="text/css">  
+	input {width:200px; height:30px;border:1px solid red;vertical-align:middle; } 
+</style> 
+
+14.web标准中定义id与class有什么区别
+
+一.web标准中是不容许重复ID的,比如 div id="aa"   不容许重复2次,而class 定义的是类,理论上可以无限重复, 这样需要多次引用的定义便可以使用他.  
+二.属性的优先级问题 ID 的优先级要高于class
+三.方便JS等客户端脚本,如果在页面中要对某个对象进行脚本操作,那么可以给他定义一个ID,否则只能利用遍历页面元素加上指定特定属性来找到它,这是相对浪费时间资源,远远不如一个ID来得简单. 
+
+15. li中内容超过长度后以省略号显示的方法  
+
+解决办法:适用与IE与OP浏览器  
+<style type="text/css">  
+li { 
+	width:200px; 
+	white-space:nowrap; 
+	text-overflow:ellipsis; 
+	-o-text-overflow:ellipsis;  
+	overflow: hidden;      
+}  
+</style> 
+
+16.为什么web标准中IE无法设置滚动条颜色了 
+
+解决办法:将body换成html  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />  
+<style type="text/css">  
+	html {       
+		scrollbar-face-color:#f6f6f6;       
+		scrollbar-highlight-color:#fff;      
+		scrollbar-shadow-color:#eeeeee;      
+		scrollbar-3dlight-color:#eeeeee;       
+		scrollbar-arrow-color:#000;       
+		scrollbar-track-color:#fff;       
+		scrollbar-darkshadow-color:#fff;       
+	}  
+</style> 
+
+17.为什么无法定义1px左右高度的容器 
+IE6下这个问题是因为默认的行高造成的,
+
+解决办法:
+例如:overflow:hidden | zoom:0.08 | line-height:1px 
+
+18.怎么样才能让层显示在FLASH之上呢 
+
+解决办法:是给FLASH设置透明  
+<param name="wmode" value="transparent" /> 
+
+19.怎样使一个层垂直居中于浏览器中 
+
+解决办法:
+这里我们使用百分比绝对定位,与外补丁负值的方法,负值的大小为其自身宽度高度除以2 
+<style type="text/css">  
+	div {       
+		position:absolute;       
+		top:50%;       
+		lef:50%;       
+		margin:-100px 0 0 -100px;       
+		width:200px;       
+		height:200px;       
+		border:1px solid red;       
+	}  
+</style> 
+

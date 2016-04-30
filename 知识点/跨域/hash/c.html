@@ -1,0 +1,11 @@
+<script type="text/javascript">
+        var b_iframe = parent.parent.document.getElementById("b_iframe");//a与c是同域，可以通过parent获取到a.htm中的包含b.htm的框架的dom
+        var hash_url = window.location.hash; //这里可以获取b.htm中传递过来的width|height       
+	 var hash_width = hash_url.split("#")[1].split("|")[0]+"px"; //分别获取值
+        var hash_height = hash_url.split("#")[1].split("|")[1]+"px";
+        console.log("hash_width=" + hash_width);
+        console.log("hash_height=" + hash_height);
+
+        b_iframe.style.width = hash_width; //a与c页面是同域，可以设置样式
+        b_iframe.style.height = hash_height;
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>element-width</title>
+		<style>
+			.box{ width:400px;}
+			.left{ width:200px;height:300px;background:red;float:left;}
+			.right{ width:200px;float:right;}
+			.div{width:180px;height:180px;background:blue;padding:15px;}
+			/*
+				在IE6下，内容会撑开设置好的宽高
+				解决办法：计算一定要精确 不要让内容的宽高超出我们设置的宽高
+			*/
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="left"></div>
+		    <div class="right">
+		    	<div class="div"></div>
+		    </div>
+		</div>
+	</body>
+</html>

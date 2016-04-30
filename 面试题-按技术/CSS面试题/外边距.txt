@@ -1,0 +1,4 @@
+1.两个元素，第一个元素有margin-bottom,第二个元素有margin-top,二者不叠加，取最大值。左右margin叠加。
+
+2.包含的盒子子级会把margin传递给父级
+父级元素增加padding会改变元素宽高，并清除子集margin问题

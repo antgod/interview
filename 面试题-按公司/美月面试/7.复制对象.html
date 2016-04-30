@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        function A(name){
+            this.name=name||'name';
+        }
+
+        var a=new A("lhj","30");
+        var cloneA=Object.create(a,{
+            age:{
+                value:30,
+                writable:true
+            }});
+        console.log("克隆对象A："+cloneA.name);
+        console.log("克隆对象A："+cloneA.age);
+
+        Object.create = function (o) {
+            var F = function () {};
+            F.prototype = o;
+            F.prototype.name='nameprototype';     //会修改A.prototype.name
+            return new F();
+        };
+        var cloneA2= Object.create(A.prototype);
+
+        cloneA.name='lhj2';
+        console.log("克隆对象A："+cloneA.name);
+        console.log("对象a："+a.name);
+        console.log("原型对象："+A.prototype.name);
+        console.log("克隆对象A2："+cloneA2.name);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+BIT百度技术学院
+
+两点\四点：分享
+
+赵磊：
+
+移动web应用
+
+前端样式开发演变之路？
+
+Sass/Less/Stylus 预处理器 标准 Css 后处理器 加上浏览器前缀、压缩
+
+样式工具库
+
+1.为什么不直接写css？需要大量重复，没有嵌套和变量定义
+
+	继承：仅针对单条声明继承，来自于文档结构
+
+	大量与文档语义无关
+
+	分模块-压缩合并成一个main.css
+
+2.预处理器
+
+	sass:2006,less:2009
+
+	变量、嵌套，机选，判断，循环，mixin,block,function,扩展
+
+	选择：stylus
+
+	dsl源码到动态ast，到静态ast，到css代码
+
+3.构建css样式工具库
+
+	复用通过mixin,function提供功能
+
+4.rem=px/16(浏览器)，有rem函数
+
+5._占位符，代表空
+
+6.css属性覆盖请慎用
+
+7.fixed:0？生成fixed left right bottom top 为0
+
+8.initalize():初始化方法
+
+9.缓动函数、动画，24种用css定义的缓动函数。
+
+10.animate.css,73中动画
+
+11.retina支持
+
+12.dppx<2中使用，bg函数('uri') bg2x('uri')
+
+13.响应式，breakpoint ,between,at
+
+14.leasrfix hide-text
+
+	ellipsis,font-face
+
+	size,triangle,circle
+
+后处理
+
+1.clean-css rework
+
+2.autoprefixer
+
+3.mqpacker 合并相同的媒体查询规则
+
+样式工具库，rider
+
+
+1.官网在哪？最佳实践？
+
+2.fisp支持吗？

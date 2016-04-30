@@ -1,0 +1,23 @@
+1.跨二级域
+
+	a,b页面document.domain设置相同值
+	a用iframe引用b页面
+	
+2.服务器代理:XMLHttpRequest文件
+	
+3.jsonp
+
+	a页面动态创建script标签，src=b.js?callback=jsonp,传递参数
+	b页面获取callback=jsonp，执行jsonp方法，传递参数，a页面有jsonp函数，a页面执行
+	
+	不能修改b页面数据
+	
+4.location.hash
+	可以通过hash来传递数据，缺点是只支持string类型，大小受到限制！
+	
+	双域操作
+	
+5.window.name
+	安全，数据写在window.name里
+
+6.flash

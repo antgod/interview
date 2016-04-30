@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>deletevar</title>
+		<script type="text/javascript">
+			var p=new Object();
+			var o=new Object();
+			o.a=1;
+			delete o;
+			console.log(o);
+			
+			p.o=o;
+			console.log(p.o==o);
+			delete p.o;
+			
+			o=undefined;
+			console.log(o);
+			
+			o=null;
+			console.log(o);
+			
+			function A(){
+				var a=1;
+				//内存中只会存在一个a，所以第二次调用a为undefined
+				return function(){
+					console.log(a)
+					a=undefined;
+				}
+			}
+			
+			var a=A();
+			a();
+			a();
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

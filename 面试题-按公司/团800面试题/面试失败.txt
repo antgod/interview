@@ -1,0 +1,37 @@
+框架与插件的区别 ：
+	插件是一种遵循一定规范的应用程序接口编写出来的程序。很多软件都有插件，插件有无数种。
+	例如在IE中，安装相关的插件后，WEB浏览器能够直接调用插件程序，用于处理特定类型的文件。
+	什么是框架　　框架（Framework）是整个或部分系统的可重用设计，表现为一组抽象构件及构件实例间交互的方法;
+	另一种定义认为，框架是可被应用开发者定制的应用骨架。前者是从应用方面而后者是从目的方面给出的定义。 　　可以说，一个框架是一个可复用的设计构件，它规定了应用的体系结构，阐明了整个设计、协作构件之间的依赖关系、责任分配和控制流程，表现为一组抽象类以及其实例之间协作的方法，它为构件复用提供了上下文(Context)关系。因此构件库的大规模重用也需要框架。
+
+UED团队包括：
+	交互设计师(Interaction Designer)、视觉设计师(Vision Designer)、用户体验设计师(User Experience Design)、用户界面设计师(User Interface Design)和前端开发工程师(Web Developer)等等。
+
+ 什么对象指向null （见function object）
+ 
+ 熟悉ECMAScript规范, 并了解其历史发展, 了解ES3, ES5, ES6之间的差异（完成）   
+两道题 （完成）   
+算法 event谷歌火狐（完成）   
+清除浮动（完成）   
+
+requirejs
+
+css缩写 font （完成）   
+html5语意话标签 对低浏览器子支持（完成）   
+firefox兼容（完成）   
+三个例子
+滚动条
+commonjs amd cmd （完成）
+jquery扩展规范（完成）   
+
+
+框架
+prototype
+zepto,iscroll,arttemplate,fastclick
+less
+mvc bootstramp
+了解一些常用算法: 二叉树, 排序算法, 检索算法
+熟练掌握某一个CSS预处理语言: LESS, Stylus, SASS/SCSS
+熟练掌握某一个MVC框架: Backbone, AngularJS, EmberJS
+熟练掌握某一个前端框架:Bootstrap, Foundation, Kube, Dojo, AmazeUI 
+熟练掌握某一个工具函数库: Lodash, Underscore

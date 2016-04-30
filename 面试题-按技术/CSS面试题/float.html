@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>float</title>
+    <style type="text/css">
+        /*
+            浮动: left/right/none
+            元素加了浮动，会脱离文档流 ，按照指定的一个方向移动直到碰到父级的边界或者另外一个浮动元素停止
+            1.使块元素在一行显示
+            2.使内嵌支持宽高
+            3.不设置宽度的时候宽度由内容撑开
+            4.脱离文档流
+            5.提升层级半层
+        */
+        div, span {
+            width: 100px;
+            height: 100px;
+            background: red;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<!-- 第一个元素先浮动，最后一个元素最后浮动，所以第一个元素在最右边 -->
+<div class="div1">div1</div>
+<div class="div2">div2</div>
+<span class="span1">span1</span>
+<span class="span2">span2</span>
+
+<div class="div3">span3</div>
+</body>
+</html>

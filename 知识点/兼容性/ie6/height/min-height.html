@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>min-height</title>
+		<style>
+			.box{height:2px;background:red;}
+			/*
+				IE6下最小高度问题
+				在IE6下元素的高度的小于19px的时候，会被当做19px来处理
+				解决办法:overflow:hidden;
+			*/
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>

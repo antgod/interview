@@ -1,0 +1,136 @@
+1.div设置 margin-left, margin-right 为 auto 时已经居中
+
+解决办法：
+首先在父级元素定义text-algin: center; 
+这个的意思就是在父级元素内的内容居中。 
+
+2.超链接访问过后hover样式就不出现的问题 
+被点击访问过的超链接样式不在具有hover和active了 
+
+解决方法是 ：
+改变CSS属性的排列顺序: L-V-H-A  
+a:link {}  
+a:visited {}  
+a:hover {}  
+a:active {}  
+
+3. 游标手指cursor  
+cursor: pointer 可以同时在 IE FF 中显示游标手指状， 
+hand 仅 IE 可以   
+
+4.UL的padding与margin 
+ul标签在FF中默认是有padding值的, 
+而在IE中只有margin默认有值, 
+
+解决方法是 ：
+定义 ul{margin:0;padding:0;}
+
+5. FORM标签    
+这个标签在IE中,将会自动margin一些边距,而在FF中margin则是0, 
+因此,如果想显示一致,所以最好在css中指定margin和 padding, 
+针对上面两个问题,我的css中一般首先都使用这样的样式 
+
+解决方法是 ：
+定义form{margin:0;padding:0;} 
+
+6. BOX模型解释不一致问题    
+在FF和IE 中的BOX模型解释不一致导致相差2px 
+
+解决方法： 
+div{margin:30px!important;margin:28px;}  
+注意这两个 margin的顺序一定不能写反， important这个属性IE6不能识别， 但别的浏览器可以识别。 
+IE6下其实解释成这样：  
+div {maring:30px;margin:28px} 
+
+7.最狠的手段 - !important;     
+如果实在没有办法解决一些细节问题, 
+可以用这个方法.FF对于!important会自动优先解析, 然而IE6则会忽略. 
+
+解决方法：
+.style{     
+	background:url(/res/images/up/tab1.gif) no-repeat 0px 0px !important; 	/*Style for FF*/     
+	background:url(/res/images/up/tab1.gif) no-repeat 1px 0px; 				/*Style for IE6,7 */
+}    
+值得注意的是，一定要将xxxx !important 这句放置在另一句之上，上面已经提过    
+
+8.为什么FF下文本无法撑开容器的高度 
+标准浏览器中固定高度值的容器是不会象IE6里那样被撑开的, 
+那我又想固定高度,又想能被撑开需要怎样设置呢？ 
+办法就是去掉height设置min-height:100px;    
+这里为了照顾不认识min-height的IE6  
+
+解决办法：
+.style{ 
+ 	background:#ccc;
+    min-height:100px;    	/*高度最小值设置为：100px*/
+    height:auto !important; /*兼容FF,IE7也支持 !important标签*/
+    height:100px; 			/*兼容ie6，IE6内容超过高度，会撑开*/
+} 
+
+9.属性选择器(这个不能算是兼容,是隐藏css的一个bug)     
+p[id]{}	div[name='div']{}     
+这个对于IE6.0和IE6.0以下的版本都失效
+如p[id]中,所有p标签中有id的都是同样式的.  
+
+10.FireFox下如何使连续长字段自动换行 
+众所周知IE中直接使用 word-wrap:break-word 就可以了,  
+FF中我们使用JS插入的方法来解决  
+<style type="text/css">  
+	div{       
+		width:300px;       
+		word-wrap:break-word;       
+		border:1px solid red; 
+	} 
+</style>  
+<div id="ff">这里是一行很长的文字aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>  
+<scrīpt type="text/javascrīpt">  
+	/* <![CDATA[ */  
+	function toBreakWord(el, intLen){       
+		var obj=document.getElementById(el);       
+		var strContent=obj.innerHTML;       
+		var strTemp="";       
+		while(strContent.length>intLen){           
+			strTemp+=strContent.substr(0,intLen)+" ";           
+			strContent=strContent.substr(intLen,strContent.length);       
+		}       
+		strTemp+=" "+strContent;       
+		obj.innerHTML=strTemp;  
+	}  
+	
+	if(document.getElementById&&!document.all)    
+	toBreakWord("ff", 37);  
+	/* ]]> */  
+</scrīpt>  
+
+11.为什么IE6下容器的宽度和FF解释不同呢 
+<style type="text/css"> 
+	div{      
+		cursor:pointer;       
+		width:200px;      
+		height:200px;       
+		border:10px solid red；       
+	} 
+</style>  
+<div onclick="alert(this.offsetWidth)">让FireFox与IE兼容</div>  
+问题的差别在于容器的整体宽度有没有将边框（border）的宽度算在其内, 
+这里IE6解释为200PX ,而FF则解释为220PX
+
+
+
+下面是两个浏览器的兼容性写法. 
+  
+第一种，是CSS HACK的方法     
+height:20px; /*For Firefox*/     
+*height:25px; /*For IE7 & IE6*/     
+_height:20px; /*For IE6*/     
+
+第二种,条件注释 
+<!--其他浏览器 –>     
+<link rel="stylesheet" type="text/css" href="css.css" />     
+<!--[if IE 7]>  <!-- 适合于IE7 –>     
+<link rel="stylesheet" type="text/css" href="ie7.css" />     
+<![endif]—>     
+<!--[if lte IE 6]>     
+<!-- 适合于IE6及以下–>     
+<link rel="stylesheet" type="text/css" href="ie.css" />     
+<![endif]—>   

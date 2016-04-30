@@ -1,0 +1,18 @@
+        区别如下:
+
+        1.text-align:center 设置文本或img标签等一些内联对象（或与之类似的元素）的居中。
+        2.margin:0 auto 设置块元素（或与之类似的元素）的居中。
+
+        注意：
+        1.当设置body{text-align:center;}。 在IE中，段落P，图片img同时实现了居中对齐，
+        也就是说text-align:center;同时作用于元素p与元素img。 在FF中，段落P，没有能实现居中对齐，
+        而图片img实现了居中对齐，也就是说text-align:center;作用于img标签，而段落p标签没有起到居中的作用。
+        2.当设置段落 p {margin:0 auto;}。 在IE与FF中，段落P均实现了居中对齐。图片img由于不是作用对象，
+        所以不会居中对齐。
+
+        有三种情况需要说明： 1.margin:0 auto;的选择器是作用对象，如div，p，而不是body。如果设置：body
+        { margin:0 auto; }将不会达到任何效果，除非你定义body的宽度，那将会让body内的元素产生位置变化。
+        如我们设置body宽度为500px。对p段落不作任何设置， 我们最大化窗口将会看到段落并非处于窗口的最左上角。
+        2.设置段落 p {text-align:center;} 将要实现的并不是段落本身的对齐方式，而是段落内元素居中对齐。
+        3. 设置图片标签img {margin:0 auto;} ，就犯了一个小错误，img类于内联对象，不可以设置图片img标签的
+        margin属性，如果一定要设置，那么先将它的属性转变为块元素，如下面的代 码：img {display:block; margin:0 auto;}

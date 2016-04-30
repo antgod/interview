@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>interview3</title>
+	<script type="text/javascript">
+		var length = 10;
+	
+		function test(fn){
+		    fn();  			//10,this指向window
+		    arguments[0]();	//2,this指向arguments
+		}
+	
+		test(function(){
+		    alert(this.length);
+		}, length);
+		
+
+	</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

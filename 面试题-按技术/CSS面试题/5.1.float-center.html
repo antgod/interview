@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>浮动元素居中</title>
+    <style type="text/css">
+        /*主要用到position:relative配合left:50%的技巧，兼容各浏览器，需要注意的是IE7下需要设置overflow:hidden;*/
+        /*来解决无法设置子元素宽度的BUG。*/
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 14px;
+            font-family: Tahoma, Geneva, sans-serif;
+        }
+
+        .clearfix:after {
+            content: "";
+            height: 0;
+            visibility: hidden;
+            display: block;
+            clear: both;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+
+        /** relative left 50% */
+        .page {
+            float: left;
+            position: relative;
+            left: 50%;
+        }
+
+        /** relative right 50% */
+        .page li {
+            float: left;
+            position: relative;
+            right: 50%;
+            overflow: hidden;
+            margin: 0 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <ul class="page">
+        <li><a href="#">上一页</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">下一页</a></li>
+    </ul>
+
+</body>
+</html>  

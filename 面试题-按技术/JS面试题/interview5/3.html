@@ -1,0 +1,25 @@
+  <script>
+	var a=[1,2,2,1,3,5];
+
+	Array.prototype.removeRepeat=function(){
+		var n=[];
+		for(var i in this){
+			this.hasOwnProperty(i)&&n.indexOf(this[i])<0&&n.push(this[i]);
+		}
+		return n;
+	}
+
+	Array.prototype.removeRepeat=function(){
+		var n=[],r={};
+		for(var i in this){
+			if(this.hasOwnProperty(i)&&!r[this[i]]){
+				n.push(this[i]);
+				r[this[i]]=true;
+			}
+		}
+		return n;
+	}
+
+	var n=a.removeRepeat();
+	alert(n)
+</script>

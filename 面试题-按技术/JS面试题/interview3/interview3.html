@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>interview1</title>
+	<script type="text/javascript">
+		var randomNum=0;
+		
+		var arrays=new Array();
+		for(var i=0;i<10;i++){
+			randomNum=Math.floor((Math.random()*100+1));
+			arrays.push(parseInt(randomNum));
+		}
+		
+		
+		
+		Array.prototype.sort=function(){
+			for(var i=this.length-1;i>=0;i--){
+				for(var j=0;j<i;j++){
+					if(this[j]>this[j+1]){
+						var temp = this[j];
+						this[j] = this[j+1];
+						this[j+1] = temp;
+					}
+				}
+			}
+		}
+		arrays.sort();
+		alert(arrays);
+		
+	</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

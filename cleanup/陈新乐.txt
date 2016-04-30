@@ -1,0 +1,110 @@
+efe.baidu.com
+
+1.smarty,vilocity模板文件,js,dom,异步操作。抽取公共js
+
+2.SPA，单页面应用
+
+3.MVC，78年提出，适合GUI开发。
+
+	view:相应用户时间
+
+	model:数据存储，接口化，后端server接口相同。
+
+	controller:控制两者之间交互
+
+	责任明确
+
+4.MVP：
+
+	Presenter，去掉controller,使用Presenter。
+
+5.JS依赖
+
+	AMD
+
+6.SAP（MVP），AMD模块管理
+
+7.Webkit ES5 Touch：业务方不要关心，使用底层框架 2G:体积小 Animation
+	碎片化环境
+
+	调试工具：
+
+	Remote debugging with Choreme
+
+	Livereload
+
+	Weiner
+
+	Safari Remote debugging
+
+	alert
+
+8.坑：
+	1.点击延迟300毫秒。
+
+	双击缩放
+
+	touch-action:none	
+
+	touchend模拟click
+
+	2.点击穿透
+
+	pointer-events:none 组织click事件
+
+	3.点击穿透-多页
+
+	body.style.pointerEvents='none';
+
+	300ms后加上这个事件。
+
+	4.overflow:scroll
+
+		IOS:-webkit-over-scrolling:touch
+
+		Andriod，低版本，不生效，无法做到。high，永远无滚动条。
+
+		iScoll
+
+	5.fixed+input?：跳到搜索页面
+
+		或者点击以后变成absolute。
+
+		
+
+9.dom tap pronmise url ajax animation route viewport 
+
+	spa框架
+	
+	scroll,cookie,widget
+
+10.saber，efe移动开发框架
+
+11.模板
+
+12.src-asset-browser
+
+lib-lib-server 
+
+amd-cmd转化
+
+同构方案
+
+13.工程化
+
+	efe开发平台edp
+
+	edp
+
+	saber rebas 
+
+	rider
+
+	深度响应式
+
+问题
+1.spa怎么实现
+
+2.白屏时间，后端返回静态页面
+
+	

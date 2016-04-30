@@ -1,0 +1,37 @@
+ 
+1、从官方推荐的写法上面得出：
+ 
+CMD ----- 依赖就近
+Js代码  收藏代码
+//CMD  
+define(function(require,exports,module){  
+        var a = require('./a');  
+        a.doSomthing();  
+});  
+ 
+AMD ----- 依赖前置
+ 
+Js代码  收藏代码
+//AMD  
+define(['./a','./b'],function(a,b){  
+       //......  
+       a.doSomthing();  
+       //......  
+       b.doSomthing();  
+})  
+ 
+	当然AMD也支持CMD的写法。
+ 
+2、执行顺序上：
+ 
+CMD是延迟执行
+	推崇的是as lazy as possible
+
+AMD是提前执行
+	requireJS从2.0开始可以延迟执行
+
+ 
+3、api设计角度：
+ 
+CMD的API推崇职责单一，没有全局的require
+AMD的API默认是一个当多个用：比如require有全局的和局部的
