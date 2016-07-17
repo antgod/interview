@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>efficiency</title>
+		
+		<script>
+			window.onload=function(){
+				var t1=new Date().getTime();
+				for (var i = 0; i < 1000; i++) {
+					var el = document.createElement('p');
+					el.innerHTML = i;
+					document.body.appendChild(el);
+				}
+				var t2=new Date().getTime();
+				console.log("原始方法添加，耗时："+(t2-t1));
+				
+				
+				t1=new Date().getTime();
+				var frag = document.createDocumentFragment();
+				for (var i = 0; i < 1000; i++) {
+					var el = document.createElement('p');
+					el.innerHTML = i;
+					frag.appendChild(el);
+				}
+				document.body.appendChild(frag);
+				t2=new Date().getTime();
+				console.log("文档片段添加，耗时："+(t2-t1));
+				
+				t1=new Date().getTime();
+				var html = [];
+				for (var i = 0; i < 10000; i++) {
+					html.push('<p>' + i + '</p>');
+				}
+				document.body.innerHTML = html.join('');
+				t2=new Date().getTime();
+				console.log("Array代替string,innerHTML添加，耗时："+(t2-t1)+",多一个数量级,IE仍然最快");
+				
+				t1=new Date().getTime();
+				var nodes = document.body.childNodes;
+				for (var i = 0, l = nodes.length; i < l; i++) {
+					var node = nodes[i];
+				}
+				t2=new Date().getTime();
+				console.log("for遍历，耗时："+(t2-t1));
+				
+				t1=new Date().getTime();
+				var node = document.body.firstChild;
+				while (node) {
+					node = node.nextSibling;
+				}
+				t2=new Date().getTime();
+				console.log("while遍历，耗时："+(t2-t1));
+				
+				
+				t1=new Date().getTime();
+				var node = document.body.firstChild;
+				while (node) {
+					node = node.nextSibling;
+					if(node)node.onclick=function(){
+						console.log(this.innerHTML);
+					}
+				}
+				t2=new Date().getTime();
+				console.log("添加事件，耗时："+(t2-t1));
+ 				
+				t1=new Date().getTime();
+				document.body.onclick=function(ev){
+					ev=ev||event;
+					var target=ev.target||ev.srcElement;
+					console.log(target.innerHTML);
+				}
+				t2=new Date().getTime();
+				console.log("添加事件委托，耗时："+(t2-t1));
+				
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

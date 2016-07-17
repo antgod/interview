@@ -1,0 +1,103 @@
+1.缓存原理、增加缓存、清除缓存
+
+2.fisp、remote、roadmap、build.sh、资源定位、打包、压缩、合并、md5,base64
+
+3.模块化文件：modjs
+
+4.性能优化工具：pagespeed\yslow
+
+5.设计工具：axure\PS切图
+
+6.谷歌浏览器，请求查看，cookie查看等
+
+7.php\smarty\linux
+
+8.精通less
+
+9.css继承\浮动对齐\url-uri\bfc\自适应\瀑布式布局
+
+10.ajaxform\ajaxsubmit\ajax请求终止
+
+11.CSS3变换、过渡、动画\UI界面
+
+12.移动端项目:糯米移动端项目
+
+13.百度地图API
+
+14.埋点：usertrack.js\items_post.js\script_init.tpl\script_init_top.tpl
+
+15.框架编写：frame-Desttop.html
+
+16.菜单、边栏：menu\sidebar
+
+17.UI\JS框架：FEX\bootstrap
+
+18.JS:RIA\setTimeout\setInterval队列\bom\console\hoverdelay\operator\string模板\util
+
+19.Reg:捕获组高级应用
+
+20.Svg流程图制作
+
+21.web\js\css知识体系
+
+22.用户检测：detect
+
+23.JQ动画\获取li序列\事件绑定\dom操作\同级元素\位置
+
+24.Echart\HighChart,线形图
+
+25.FEX\GRI：包括富文本控件、文件上传控件。
+
+26.diagramo,gooflow
+
+过年：
+	SVG\Canvas(了解)：绘制流程图。（初四\初五）
+		
+年后：
+
+	《JS高级程序设计》
+	
+	CSS3，滑动标签，危险电影院，棱镜，集客标签，慕课
+	
+	jQuery Validation
+	
+	移动端
+	
+	d3
+	
+	angularjs
+	
+	mootools
+	
+	Axure原型设计高级应用
+	\《JS框架设计》深入阅读
+	
+	Amaze\Magic：（延后）
+	PHP\Smarty：（延后）
+
+	CSS3\bootstrap
+	100度\Jquery源代码
+	
+	KOALA\PJAX
+	百度前端知识，收藏夹、慕课
+
+
+
+    代理，设计模式
+    缓存策略
+    浏览器效率优化   l
+	总结\JS高级程序设计\JS框架开发
+	学习浏览器内核开发
+    webgl(待学习)
+	开发\部署：Ant\Make\LAMP\JSDOC\JSLint\CssLint\JSMin
+	前端框架\库：Prototype\Mootools\Zend\QUtil
+	编程思想：Javascript设计模式\编程模式\数据结构\MVC\AngularJS\Backbone\面向对象\面向切面编程
+	性能工具：WebPageTest\SlowSlow\34Rule
+	编程语言：Perl\Python\linux\shell\nodejs
+	移动端：JqMobile,zepto,糯米移动端项目
+	安全：CSRF\XSS
+	Web服务：Google Open API\App Engine\Cloud
+	前沿技术社区：UED Team\HTML5研究小组
+
+
+	

@@ -1,0 +1,83 @@
+1.描述ECMAScrpit与Javascript的关系
+
+2.Javascript有没有重载，如果有，写出如何实现，如果没有，写出如何模拟重载
+
+3.写出innerText与innerHTML的区别
+
+4.写出Javascript中的原生数据类型，以及如何判断Javascript中数据类型
+
+5.请描述下题出现的现象
+function(){
+	for(var i=0,j=0;i<6,j<10;i++){
+		var n=i+j;
+	}
+	document.write(n);
+}
+
+6.var a=[3,4,5,6];
+a.prototype.dumy=7;
+
+分别写出方法输出a原生属性、内部属性、原型链属性，删除内部属性，保留原型链属性
+
+7.请写出下列代码输出内容,为什么，改写代码输出不同的内容
+<script>
+	for(var i=0;i<10;i++){
+		setTimeout(function(){
+			console.log(i);
+		},1000)
+	}
+</script>
+
+8.写出正则表达式判断电子邮箱格式
+
+9.ajax同步与异步的不同点
+
+10.写出js绑定事件的方法，写出尽可能多的事件
+
+11.解析跨域调用URL字符串，并把字符串参数转成JSON格式
+
+12.写一个方法打印1~10000所有素数
+
+7.请写出下列代码输出内容,为什么，改写代码输出不同的内容
+<script>
+	for(var i=0;i<10;i++){
+		setTimeout(function(){
+			console.log(i);
+		},1000)
+	}
+</script>
+
+13.
+var A=(function(){
+	var self;
+	function A(){
+		if(!self){
+			self=this;
+		}
+		self.name=name;
+		return self;
+	}
+	
+	A.prototype.say=function(name){
+		document.write(this.name+":"+name+"<br/>");
+	}
+	return A;
+})
+
+var a=new A("A");
+var b=new B("B");
+a.say("A");
+b.say("B");
+document.write(a==b);
+
+
+
+
+
+
+
+
+
+
+
+

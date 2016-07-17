@@ -1,50 +1,49 @@
-�������ʵ�Android������Html5д��ʲô���ƣ���ʱ����û�����������⣬Ҳ��html5���Ǻ��˽⣬���������ܽ�һ�¡� 
-android��iphone���ṩ��webview�Ŀؼ�������ؼ�ʵ����һ��webkit������ںˣ����ڽ���html��css��js���롣 
-���ԣ�native app���Ե���webview�ռ���չʾ���ǵ�webҳ�档ͬʱ�����ڶ�css3�ĽϺ�֧�֣�native����Ѥ���Ľ���Ϳ�����html+css�Ϻõ�ʵ�ֳ������ﵽ�����native app��Ч���� 
-����ΪWebview�Ŀؼ��Ĵ���,�����ܹ������ǵ�Ӧ���м���Web��ҳ��Ԫ��.Ҳ��Ϊ���ǵĿ����ṩ�˸����˼·.  
+曾被人问到Android界面用Html5写有什么优势，当时由于没有想过这个问题，也对html5不是很了解，现在在这总结一下。 
+android和iphone都提供了webview的控件，这个控件实质是一个webkit浏览器内核，用于解析html、css、js代码。 
+所以，native app可以调用webview空间来展示我们的web页面。同时，由于对css3的较好支持，native那种绚丽的界面就可以用html+css较好的实现出来，达到逼真的native app的效果。 
+正因为Webview的控件的存在,我们能够在我们的应用中加入Web网页的元素.也就为我们的开发提供了更多的思路.  
   
-�ܵ���˵������Android�Ŀ��������ֽ��������Native , Web �� Hybrid. 
-Native app������Android SDK��ʵ�ֵ�Ӧ�ã� 
-Web app�ǻ����������ʵ�ֵ�һ��Ӧ�á� 
-Hybrid app��һ�ֿ������ص�Native App�����û������ȫ�����߲���Ԫ����Ƕ��ʽ����������WebView֮��ģ��������С����û���˵��Hybrid App��Native App���������������Ƕ����Դ�Ӧ�ó����̵���г������أ�������ƶ��豸�ϣ������з�ʽ��ȫ��ͬ�����κ�Ӧ�ó��򡣵��ǶԿ�������˵������ھ޴�Ĳ��죬��Ϊ��������Ϊÿһ���ƶ�����ϵͳ��ͷ��ʼ���±�дӦ�ó��򣬶���ֻҪ��HTML��CSS��JavaScript��д����һ����Ӧ�ó�����룬�Ϳ����ڶ���豸���ظ�ʹ�á� 
+总的来说，关于Android的开发有三种解决方案：Native , Web 和 Hybrid. 
+Native app就是用Android SDK来实现的应用； 
+Web app是基于浏览器来实现的一种应用。 
+Hybrid app是一种可以下载的Native App，其用户界面的全部或者部分元素在嵌入式浏览器组件（WebView之类的）里面运行。对用户来说，Hybrid App与Native App几乎难以区别：它们都可以从应用程序商店或市场来下载，存放在移动设备上，其运行方式完全如同其他任何应用程序。但是对开发者来说，这存在巨大的差异，因为他们无需为每一种移动操作系统从头开始重新编写应用程序，而是只要用HTML、CSS和JavaScript编写其中一部分应用程序代码，就可以在多个设备上重复使用。 
   
-����˵һ�¸�����Ҫ����ȱ�㡣 
+首先说一下各自主要的优缺点。 
 Native app 
-�ŵ㣺  
-���Գ�ַ���ϵͳ���ԣ�����ϵͳ�����ڴ�����ȣ����ٿ��豸Ӳ����������������������ȣ��� 
-���ṩ��ѵ��û����飬�����ʵ��û����棬����Ľ���,�Ƚ��ʺ�������Ϸ������Ҫ��Ƚϸߵ�Ӧ�ã� 
-�ɷ��ʱ�����Դ�� 
-��web app��ȣ����ܸ��ã����������������Ǹ���Ӧ�ã��� 
-ȱ�㣺 
+优点：  
+可以充分发挥系统特性（调用系统服务、内存管理等），操控设备硬件（如相机、蓝牙、振动器等）； 
+可提供最佳的用户体验，最优质的用户界面，最华丽的交互,比较适合制作游戏等性能要求比较高的应用； 
+可访问本地资源； 
+与web app相比，性能更好，交互流畅（尤其是复杂应用）。 
+缺点： 
  
-�ڸ��µ�ʱ����Ҫ�����µİ汾���������㣻  
-��ƽ̨�������ԡ�sdk�Ϳ���������ͬ��ѧϰ�ɱ��ߣ� 
-��ƽ̨�����ݣ���ƽ̨�Ŀ�������ֲ�Ƚϸ��ӣ������ɱ��ߣ��������ڳ��� 
-��Զ����豸����ͬ�ֱ��ʡ���ͬӲ�����õȣ��ĵ��Ժ�������鷳�������ɱ��ߣ��������ڳ��� 
-ά�ֶ���汾�ĳɱ��Ƚϸߡ� 
+在更新的时候需要发布新的版本，不够方便；  
+各平台开发语言、sdk和开发环境不同，学习成本高； 
+各平台不兼容，多平台的开发、移植比较复杂，开发成本高，开发周期长； 
+针对多种设备（不同分辨率、不同硬件配置等）的调试和适配较麻烦，开发成本高，开发周期长； 
+维持多个版本的成本比较高。 
  
-Web app����web��Ҳ���ǲ���Ҫ���أ�ͨ���ֻ�������򿪵�һ��Ӧ�ã� 
-�ŵ㣺 
-ʹ��web��ʽ����ʵ����ҳ���֮�󣬿����������豸��ʹ�ã�ʵ�ֿ�ƽ̨��  
-ʹ��web��ʽ����mobie app���ĺô��ǣ��ͻ���������£����ҽ���ĸ��������ǻ���html5������ֻ��Ҫд�������������˹��ܵĸ������ӣ� 
-����������ʾ�ܶ��ֻ��û����Ǿ�����������app����ͬʱ�����native app��web��ʽ�޸�app�Ľ���ĳɱ�����һЩ�� 
-����˵�����ڶԽ����������нϸ�Ҫ���app���Ƚ���������web��ʽʵ��mobie app�� 
-ȱ�㣺 
-�������ֻ��������֧�֣�  
-������ƶ�Web App��ָ��������������е�Ӧ�ó��򣬶�����Hybrid App��Ŀǰֻ�ܷ�������ͷ����˷�͵�ַ�����豸���ܡ� 
-��Ȼ��ά�����ˣ�W3C������Ĺ���ȡ���˽�չ����Web App���Է��������豸���� 
-�����ƶ������Ŀǰ�����ṩ�����Ĺ��ܡ����ƶ�������ṩ�����Ĺ��ܶ����ഴ���͵��ƶ�Ӧ�ó�����˵��һ���ؼ�Ҫ�� 
-�����������޷���ַ���ϵͳ���ԣ�����ϵͳ�����ڴ�����ȣ����޷��ٿ��豸Ӳ����������������������ȣ��� 
+Web app（纯web，也就是不需要下载，通过手机浏览器打开的一种应用） 
+优点： 
+使用web方式可以实现网页完成之后，可以在其他设备上使用，实现跨平台；  
+使用web方式制作mobie app最大的好处是，客户端无需更新，而且界面的更新由于是基于html5，可能只需要写几个插件就完成了功能的更新添加； 
+并且数据显示很多手机用户不是经常更新他的app程序，同时相对于native app，web方式修改app的界面的成本更低一些。 
+所以说，对于对界面的灵活性有较高要求的app，比较倾向于用web方式实现mobie app。 
+缺点： 
+受限于手机浏览器的支持，  
+纯粹的移动Web App（指在浏览器里面运行的应用程序，而不是Hybrid App）目前只能访问摄像头、麦克风和地址簿等设备功能。 
+虽然万维网联盟（W3C）方面的工作取得了进展，让Web App可以访问这类设备服务， 
+但是移动浏览器目前并不提供这样的功能——移动浏览器提供这样的功能对许多创新型的移动应用程序来说是一个关键要求； 
+而且性能上无法充分发挥系统特性（调用系统服务、内存管理等），无法操控设备硬件（如相机、蓝牙、振动器等）。 
   
 Bybrid app 
-Hybrid App����������ԭ�����ܣ�ͬʱ��Ϊ��������HTML5�䵱�ž���ս�������̨�ס�  
-�ŵ㣺 
-��Ϸ�ʽ������appӵ���������ߵ�һЩ�ŵ�,����Web app�ĸ���Ѹ��,��,�ɱ���֮���,Ҳ����Native appһ�����ʱ��صĺܶ���Դ�ͷ�����Hybrid App���� 
-���˿�ԴPhoneGap��ȿ�ܣ�JavaScript������п��ܷ����ֻ����̡�����Ƭ��Ѱ�һ򴴽���ϵ�˻�Լ������Լ���������ƶ�Web App�޷����ʵ����������豸���ܡ� 
-�ܷ�����豸���ܲ�����Hybrid App���ƶ�Web App��Ψһ���� 
-��һ����Ҫ�������ǣ�Hybrid App��������ͨ��Ӧ�ó����̵�ַ��ģ�����������������Hybrid App���������غͰ�װ���� 
+Hybrid App开发利用了原生功能，同时又为将来采用HTML5充当着具有战略意义的台阶。  
+优点： 
+混合方式开发的app拥有上述两者的一些优点,比如Web app的更新迅速,简单,成本低之类的,也能像Native app一样访问本地的很多资源和服务，在Hybrid App领域， 
+有了开源PhoneGap库等框架，JavaScript代码就有可能访问手机罗盘、拍照片、寻找或创建联系人或约会事项，以及充分利用移动Web App无法访问的其他许多设备功能。 
+能否访问设备功能并不是Hybrid App和移动Web App的唯一区别。 
+另一个重要的区别是，Hybrid App基本上是通过应用程序商店分发的：不是用浏览器浏览至Hybrid App，而是下载和安装它。 
   
-���⣬Hybrid App��HTMLҳ�������Web�����������ͣ����Ⲣ����Ӳ��Ҫ��Ϊ���������ܣ�Hybrid App��������ȫ������Web��Դ����HTML��JavaScript��CSS��ͼ�񣩵�һ���׸������Ա��û���������������Щ��Դ�������ص�Web����������Щ��Դ���͹����� 
+另外，Hybrid App的HTML页面可以由Web服务器来传送，但这并不是硬性要求。为了提升性能，Hybrid App可以添加全部所需Web资源（即HTML、JavaScript、CSS和图像）的一整套副本，以便用户可以立即访问这些资源，而不必等Web服务器将这些资源发送过来。 
   
-ȱ�㣺 
-ȱ���Web app�е�����,������Щ�����⣬Hybrid App���ƶ�Web App��һЩ��ͬ���ص㡣���񴿴��Native App��ֱ��ʹ�ò���ϵͳ�ṩ��ͼ��API���û����������Hybrid App�У������ҳ�������������Ⱦ������ִ�С����ͺñ�����������ҳ���档�����ζ�ţ�Ŀǰ��ֻ����ԭ����ʽ��д��ҳ����ܻ����Ϸ������ͼ��
+缺点： 
