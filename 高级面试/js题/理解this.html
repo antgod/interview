@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var name='w';
+
+        var a={
+            name:'a',
+            getName(){
+                return this.name;
+            }
+        };
+
+        var b={
+            name:'b',
+            name2:this.name,
+            setName(){
+                var name='s';
+                var c= a.getName;
+                this.getName= a.getName;
+
+                console.log('getName:c',c());
+                console.log('getName:a',a.getName());
+
+                console.log('setName:name',name);
+                console.log('setName:b.name',this.name);
+                console.log('setName:b.name2',this.name2);
+                console.log('setName:b.getName',this.getName());
+            }
+        };
+
+        b.setName();
+
+    </script>
+    </body>
+</html>

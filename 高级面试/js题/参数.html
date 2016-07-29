@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function setName(obj) {
+            obj.name = "Nicholas";
+            obj = new Object();
+            obj.name = "Greg";
+        }
+        var person = new Object();
+        setName(person);
+        console.log(person.name); //"Nicholas"
+
+        //        上面代码创建一个对象，并将其保存在了变量 person 中。然后，这个变量被传递到 setName()
+        //        函数中之后就被复制给了 obj。在这个函数内部，obj 和 person 引用的是同一个对象。换句话说，即
+        //        使这个变量是按值传递的，obj 也会按引用来访问同一个对象。于是，当在函数内部为 obj 添加 name
+        //        属性后，函数外部的 person 也将有所反映；因为 person 指向的对象在堆内存中只有一个，而且是全
+        //        局对象。有很多开发人员错误地认为：在局部作用域中修改的对象会在全局作用域中反映出来，就说明
+        //        参数是按引用传递的。为了证明对象是按值传递的，我们再看一看下面的例子：
+
+        function setUsers(users) {
+            users = users.map(item => {
+                return item;
+            })
+        }
+
+        let users = [1, 2, 3];
+        setUsers(users);
+        console.log(users);
+    </script>
+    </body>
+</html>
