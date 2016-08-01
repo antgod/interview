@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        var P = (function () {
+            var Person = function (opts) {
+                return Person.prototype.init(opts);
+            };
+
+            Person.prototype={
+                init : function (opts) {
+                    this.config=opts;
+                    return this;
+                },
+                say:function(){
+                    console.log(`hello,${this.config.name}`);
+                }
+            };
+
+            return Person;
+        })();
+
+        var p1 = P({name:'lhj'});
+        p1.say();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

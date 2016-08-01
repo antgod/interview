@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>hasOwnProperty</title>
+		<script>
+			//hasOwnProperty :判断是不是对象自身下面的属性，此方法无法检查该对象的原型链中是否具有该属性，该属性必须是对象本身的一个成员。
+			
+			var arr = [];
+			arr.num = 10;
+			Array.prototype.num2 = 20;
+			
+			//验证Object.prototype.hasOwnProperty   						//Object对象的方法
+			alert(arr.hasOwnProperty==Object.prototype.hasOwnProperty); //true
+			alert(arr.hasOwnProperty('num')  );  						//true
+			alert(arr.hasOwnProperty('num2'));  						//false
+			alert(Array.prototype.hasOwnProperty('num2'));  			//true
+			alert(Array.prototype.hasOwnProperty('num'));				//false
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

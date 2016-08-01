@@ -1,0 +1,50 @@
+<script>
+	var name="The Window";
+	
+	var object={
+		name:"My Object",
+		getNameFn:function(){
+			return function(){
+				return this.name;
+			};
+		}
+	};
+	
+// 	(object.getNameFn())为函数体：function(){
+// 		return function(){
+// 			return this.name;
+// 		};
+// 	}，所以返回window.name
+	console.log((object.getNameFn())());
+	
+	function Test(){
+		this.name="test1 name";
+		var _this=this;
+		
+		this.show=function(){
+			return function(){
+                console.log(this.name);
+                console.log(_this.name);
+			}
+		}
+		
+		this.getName=function(){
+			return this.name;
+		}
+		
+	}
+	
+	var test1=new Test();
+	//test1.show()返回函数体，所以调用window.name
+	test1.show()();
+	
+	//输出test1对象下的name
+    console.log(test1.getName());
+	
+	//同上，因为test1.getName=(test1.getName)
+    console.log((test1.getName)());
+	
+	//赋值然后返回赋值结果，赋值结果是函数本身，所以调用window.name
+    console.log((test1.getName=test1.getName)());
+	
+</script>

@@ -1,0 +1,43 @@
+<script>
+    var a=function(){this.a=1;};
+
+    var f=function(){this.f=1;};
+
+    f.prototype=a.prototype;
+
+    //f.prototype.constructor=f
+
+    var b=function(){this.b=1;};
+
+    b.prototype=new f();
+
+    b.prototype.constructor=b;
+
+    var ob=new b();
+
+    //指向f对象，对象上有f属性
+    console.log(ob.__proto__);
+
+    //指向a原型对象，原型对象上没有a属性,如果打开第八行注释，指向f原型对象，原型对象没有f属性
+    console.log(ob.__proto__.__proto__);
+
+    //指向object原型对象
+    console.log(ob.__proto__.__proto__.__proto__);
+</script>
+
+<script>
+    var anotherObject = {
+        a:2
+    };
+    var myObject = Object.create( anotherObject );
+    console.log(anotherObject.a); // 2
+    console.log(myObject.a); // 2
+    console.log(anotherObject.hasOwnProperty( "a" )); // true
+    console.log(myObject.hasOwnProperty( "a" )); //false
+
+    console.log(myObject);	//指向object对象
+    console.log(myObject.__proto__);	//指向object原型对象,原型对象上有a属性，这说明myObject.prototype=new anotherObject()方式继承
+
+    console.log(myObject.__proto__.hasOwnProperty( "a" ));//true
+    console.log(Object.getOwnPropertyNames(myObject.__proto__)); //["a"]:此方法可以列出自身所有属性，包括不可枚举的，Object.keys只可以获得不可枚举的。但是两个方法都不能列出继承属性
+</script>

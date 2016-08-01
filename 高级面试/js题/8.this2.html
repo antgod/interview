@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>this2</title>
+		<meta name="keywords" content="" />
+		<meta name="Description" content="" />
+		<script>
+			function test(){
+				this.msg = 'hello';
+				msg = 'nice';
+				this.test1 = function(){
+					msg = 'hi';
+					var msg = 'good';
+					return this.msg;
+				}
+				return this;
+			}
+			var x = new test().test1();
+			var y = test().test1();
+
+			console.log(x);                //hello
+			console.log(y);                //nice,因为test返回this指向window.
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+       function Person(opts) {
+           if(!(this instanceof Person)) return new Person(opts);
+           this.config=opts;
+       }
+
+       Person.prototype={
+           say:function(){
+               console.log(`hello,${this.config.name}`);
+           }
+       };
+
+        var p1 = Person({name:'lhj'});
+        p1.say();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

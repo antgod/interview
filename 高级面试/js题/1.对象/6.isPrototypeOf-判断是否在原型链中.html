@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>isPrototypeOf</title>
+		<script>
+			//isPrototypeOf用来判断对象是否在函数的原型链之内
+			//是则返回true，否则返回false。
+			function A(){}
+            function B(){}
+            B.prototype=new A();
+            B.prototype.constructor=B;
+            var b=new B();
+			console.log(A.prototype.isPrototypeOf(b));
+
+			//以下例子对应上个文件
+			console.log(Array.prototype.isPrototypeOf([]));
+			console.log(Object.prototype.isPrototypeOf([]));
+			console.log(Number.prototype.isPrototypeOf(Number));
+			console.log(Function.prototype.isPrototypeOf(Number));
+			console.log(Function.prototype.isPrototypeOf(Function));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

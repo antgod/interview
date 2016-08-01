@@ -1,0 +1,29 @@
+<script>
+    var num=10;
+    var obj={
+        num:10,
+        fn:(function(){
+            //this指向window
+            this.num*=2;	//window.num=20;
+            num*=2;			//前置声明num=undefined*2=NaN;
+            var num=20;		//私有变量num=20;
+            return function (){
+                //fn(),this指向window，obj.fn(),this指向obj
+                this.num*=2;			//第一次window.num=40，第二次obj.num=10*2=20
+                alert(window.num)
+                num*=2;					//fn():私有变量num=40,obj.fn():私有变量num=40*2=80;
+                //console.log	(this)
+                console.log(num);		//第一个：取私有变量num=40（作用域就近原则）
+                //console.log(num);		//第二个：取私有变量num=80
+
+            }
+        })()
+
+    };
+    var fn=obj.fn
+    fn();		//第一次
+    obj.fn();	//第二次
+    //参数1：window.num=40
+    //参数2：obj.num=10*2=20
+    console.log(num,obj.num)
+</script>

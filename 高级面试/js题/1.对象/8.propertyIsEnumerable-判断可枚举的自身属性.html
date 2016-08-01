@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>propertyIsEnumerable</title>
+		<script>
+			//如果属性是对象自身属性，并且可枚举，该方法返回true。
+
+			var a = ['我是个可枚举属性',"我是个可枚举属性1"];
+			a.b=1;
+			a.__proto__.c=1;
+
+            Object.defineProperty(a,"Name",{         //定义一个属性
+                enumerable:true	                     //可迭代，默认：不能迭代
+            });
+
+            console.log(a.propertyIsEnumerable("Name"));        // 返回true
+			console.log(a.propertyIsEnumerable(1));          	// 返回true,数组第一个
+			console.log(a.propertyIsEnumerable('b'));       	// 返回true
+			console.log(a.propertyIsEnumerable('c'));        	// 返回false，因为不是对象上的属性，而是原型的属性
+
+			console.log("原型属性："+a.__proto__.propertyIsEnumerable('c')); // 返回true，是原型的属性
+
+			console.log(Math.propertyIsEnumerable('random'));   // 返回false,因为Math不是对象
+			console.log(this.propertyIsEnumerable('location'));  // 返回true,window包含可枚举的location属性
+
+
+			for(var i in a){
+				console.log("遍历属性："+i);									//原型中定义的属性也会被打印
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

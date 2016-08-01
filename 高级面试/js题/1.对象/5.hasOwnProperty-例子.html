@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function A() {
+            this.a = 1;
+        }
+
+        A.prototype.c=3;
+
+        function B() {
+            A.call(this);
+            this.b=2;
+        }
+
+        B.prototype=new A();
+        B.prototype.d=4;
+        B.prototype.constructor=B;
+
+        B.prototype.say=function(){
+             console.log(this.a,this.b,this.c,this.d)
+        };
+
+        var a=new A();
+        var b=new B();
+
+        console.log(b.hasOwnProperty("a"));      //true
+        console.log(b.hasOwnProperty("b"));      //true
+        console.log(b.hasOwnProperty("c"));      //false
+        console.log(b.hasOwnProperty("d"));      //false
+
+        console.log(b.__proto__.__proto__.hasOwnProperty("c")); //true,指向A.prototypee
+        console.log(b.__proto__.hasOwnProperty("d"));           //true,指向B.prototype
+        b.say();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
