@@ -1,0 +1,28 @@
+<script>
+	var F=(function(){
+		var self;
+		function A(name){
+			if(!self){
+				self=this;
+			}
+			
+			self.name=name;
+			return self;
+		}
+		
+		A.prototype.say=function(name){
+			document.write(this.name+":"+name+"<br/>");
+		}
+	
+		return A;
+	});
+	
+	var A=F();		    //返回A的名字
+	var a=new A("A");	//self=A,self.name=A,A.name也就等于A
+	var b=new A("B");	//self不为空，因为A在内存中，A的父级F也在内存中，
+	                    // F下self仍然在内存中，self=A，self.name=B,A.name=B
+	a.say("A");		//this.name=a对象.name=self.name=B
+	b.say("B");		//this.name=b对象.name=self.name=B
+	document.write(a==b);	//a对象=b对象=self
+
+</script>

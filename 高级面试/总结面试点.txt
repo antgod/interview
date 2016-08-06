@@ -1,0 +1,31 @@
+css
+bfc
+图片1像素
+
+垂直居中
+style sass 最佳实践
+选择器优先级以及性能
+环形的loading
+两边对其
+左右固定像素，里面1：2
+常用css单位，em,rem
+知道 li{ display: inline-block} 之间空隙的解决方法，但不知道原因。
+不知道图片与文字之间的对齐方式，不知道 baseline。
+
+盒子模型，背景默认建立在哪层，如何切换模式，动画，清除浮动，bugs处理，响应式与自适应
+
+作用域链，闭包必考
+
+跨域必考
+
+setInterval setTimeout bug
+
+性能
+
+设计模式
+
+jq源码
+
+架构
+
+var re = /(?=(?!\b)(\d{3})+$)/g;
