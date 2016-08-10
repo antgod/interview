@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>horizontal-center</title>
+    <style>
+        /*text-align：让子元素为行级元素，文字元素居中，对块级元素不起作用*/
+        .wrap1 {
+            background: #ddd;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .wrap1 .child {
+            background: #aaa;
+            width: 100px;
+            display: inline-block;
+        }
+
+        /*margin：当前块级元素居中,对行级不起作用*/
+        .wrap2 {
+            background: #ddd;
+        }
+
+        .wrap2 .child {
+            background: #aaa;
+            width: 100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap1">
+        <span class="child">1</span>
+    </div>
+
+    <div class="wrap2">
+        <div class="child">2</div>
+    </div>
+</body>
+</html>

@@ -6,9 +6,9 @@
 
 *.echart,highchart
 
-*.jq源码（穿插学习，学习中，第十课）
+*.jq源码
 
-*.100度(页面制作，待学习)
+*.100度
 
 *.gri,fex,amaze,bootstrap,magic
 
@@ -16,7 +16,7 @@
 
 *.shell,linux,数据可视化
 
-*.mvc框架：angularjs（完成、待补充）
+*.mvc框架：angularjs
 
 深入了解：
 
@@ -26,10 +26,10 @@
 
 *.HTML5与CSS3后续。
 
-*.移动端，css响应式布局（待学习）
+*.移动端，css响应式布局
 
-*.nodejs（待学习）
+*.nodejs
 
 *.学习浏览器内核开发
 
-*.webgl(待学习)
+*.webgl

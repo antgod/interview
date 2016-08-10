@@ -1,0 +1,5 @@
+bfc
+setInterval setTimeout bug
+图片1像素
+环形的loading
+var re = /(?=(?!\b)(\d{3})+$)/g;

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>baseline</title>
+    <!-- http://www.cnblogs.com/rainman/archive/2011/08/05/2128068.html-->
+    <style>
+
+        /*外高40,行高20，文高16，顶线2，文字起始3，文字结束18，基线16，底线19*/
+        /*
+            顶线计算公式：0+（行高-文高）/2
+            底线计算公式：(行高+1)-（行高-文高）/2
+            行距:行高-文高
+        */
+        /*
+
+            值	描述
+            baseline	默认。元素放置在父元素的基线上。
+            sub	垂直对齐文本的下标。
+            super	垂直对齐文本的上标
+            top	把元素的顶端与行中最高元素的顶端对齐
+            text-top	把元素的顶端与父元素字体的顶端对齐
+            middle	把此元素放置在父元素的中部。
+            bottom	把元素的顶端与行中最低的元素的顶端对齐。
+            text-bottom	把元素的底端与父元素字体的底端对齐。
+            length
+            %	使用 "line-height" 属性的百分比值来排列此元素。允许使用负值。
+            inherit	规定应该从父元素继承 vertical-align 属性的值。
+        */
+        div{line-height: 20px;background: #e7e7e7;}
+    </style>
+</head>
+<body>
+<div>
+    中文abcdefg<br>
+    中文abcdefg<br>
+</div>
+</body>
+</html>

@@ -51,7 +51,7 @@
 26.diagramo,gooflow
 
 过年：
-	SVG\Canvas(了解)：绘制流程图。（初四\初五）
+	SVG\Canvas
 		
 年后：
 
@@ -72,8 +72,8 @@
 	Axure原型设计高级应用
 	\《JS框架设计》深入阅读
 	
-	Amaze\Magic：（延后）
-	PHP\Smarty：（延后）
+	Amaze\Magic：
+	PHP\Smarty：
 
 	CSS3\bootstrap
 	100度\Jquery源代码
@@ -88,7 +88,7 @@
     浏览器效率优化   l
 	总结\JS高级程序设计\JS框架开发
 	学习浏览器内核开发
-    webgl(待学习)
+    webgl
 	开发\部署：Ant\Make\LAMP\JSDOC\JSLint\CssLint\JSMin
 	前端框架\库：Prototype\Mootools\Zend\QUtil
 	编程思想：Javascript设计模式\编程模式\数据结构\MVC\AngularJS\Backbone\面向对象\面向切面编程

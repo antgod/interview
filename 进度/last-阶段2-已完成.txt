@@ -1,64 +1,49 @@
-问题收集：
-
-	css传递:bfc(完成)
-	瀑布式布局(完成)
-	
-	右侧自适应布局(完成)
-	
-	获得li序列(完成)
-	
-	css做常用布局（参考dramweaver）
-	js模板，php模板，java模板
-	代码效率优化
-	定时器的原理
-	盒子模型差异
-	
 技能学习：
 
-*.PS抠图合图(完成)
+*.PS抠图合图
 
-*.学习svg(完成)
+*.学习svg
 
-*.canvas(完成)
+*.canvas
 
-*.设计(穿插学习，学习中，《就这么简单：P43》)
+*.设计
 
-*.jq源码（穿插学习，学习中，第十课）
+*.jq源码
 
-*.动画插件(待学习)
+*.动画插件
 
-*.前端效率优化，调试工具的使用(待学习)
+*.前端效率优化，调试工具的使用
 
-*.js高级程序设计（最后学习，待学习）
+*.js高级程序设计
 
-*.100度(最后学习，待学习)
+*.100度
 
 
 扩展内容：
 
-*.学习jcscript(完成)
+*.学习jcscript
 
-*.less（完成、待补充）
+*.less
 
-*.mvc框架：angularjs（完成、待补充）
+*.mvc框架：angularjs
 
-*.表现层框架：bootstrap（完成、待补充）
+*.表现层框架：bootstrap
 
 *.前端常用框架：bootstrap,angularjs,less,seajs,commonjs,nodejs,requirejs,
-dojo,d3,prototype,yui,extjs,jq（完成、待补充）
+dojo,d3,prototype,yui,extjs,jq
 
-*.图表插件:echart,moochart,highchart（完成、待补充）
+*.图表插件:echart,moochart,highchart
 
 深入了解：
 
-*.封装右键菜单，选项卡控件，左右拖拽滑屏，360全景展示（待学习）
+*.封装右键菜单，选项卡控件，左右拖拽滑屏，360全景展示
 
-*.css3（待学习）
+*.css3
 
-*.移动端，css响应式布局（待学习）
+*.移动端，css响应式布局
 
-*.nodejs（待学习）
+*.nodejs
 
 *.学习浏览器内核开发
 
-*.webgl(待学习)
+*.webgl

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>horizontal-center</title>
+    <style>
+        body{margin: 0;}
+        div{
+            border: 1px solid #000000;
+        }
+        .wrap1 {
+            background: #ddd;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+
+        }
+
+        .wrap1 img {
+            vertical-align: middle;
+        }
+
+        .wrap2 {
+            background: #ddd;
+            width: 100px;
+            height: 100px;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+
+
+        .wrap3 {
+            background: #ddd;
+            width: 100px;
+            height: 100px;
+            display: -webkit-box;
+            -webkit-box-pack:center;
+            -webkit-box-align:center;
+        }
+
+        .wrap3 img{
+            width: 50px;
+            height: 50px;
+        }
+
+     </style>
+</head>
+<body>
+<div class="wrap1">
+    <img src="bg.gif" />
+</div>
+
+<div class="wrap2">
+    <img src="bg.gif">
+</div>
+
+<div class="wrap3">
+    <img src="bg.gif">
+</div>
+
+
+</body>
+</html>

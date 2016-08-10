@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>horizontal-center</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            border: 1px solid #000000;
+        }
+
+        .wrap {
+            background: #ddd;
+            line-height: 100px;
+        }
+
+        img {
+            display: inline-block;
+        }
+
+        .wrap img:nth-child(1) {
+            vertical-align: bottom;
+        }
+
+        .wrap img:nth-child(2) {
+            vertical-align: text-top;
+        }
+
+        .wrap img:nth-child(3) {
+            vertical-align: middle;
+        }
+
+        .wrap img:nth-child(4) {
+            vertical-align: text-bottom;
+        }
+
+        .wrap img:nth-child(5) {
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <img src="bg.gif"/>aa
+        <img src="bg.gif"/>aa
+        <img src="bg.gif"/>aa
+        <img src="bg.gif"/>aa
+        <img src="bg.gif"/>aa
+    </div>
+</body>
+</html>
