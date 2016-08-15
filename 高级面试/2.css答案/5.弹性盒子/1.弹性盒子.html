@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .flex{
+            display: flex;
+            margin: 0 10px;
+        }
+
+        .flex>div{
+            margin-right: 5px;
+            background: #ccc;
+            height: 20px;
+        }
+
+        .flex>div:nth-child(1){
+            flex: 1;
+        }
+        .flex>div:nth-child(2){
+            flex: 2;
+        }
+        .flex>div:nth-child(3){
+            margin-right: 0;
+            flex: 3;
+        }
+
+        .wrap{
+            font-size: 0;
+            width: 200%;
+            margin: 10px;
+        }
+
+        .wrap>div{
+            font-size: 16px;
+            margin-right: 5px;
+            display: inline-block;
+            background: #ccc;
+            height: 20px;
+            overflow: hidden;
+        }
+
+        .wrap>div:nth-child(1){
+            width: calc((100vw - 20px - 10px)/6)
+        }
+        .wrap>div:nth-child(2){
+            width: calc((100vw - 20px - 10px)/3)
+        }
+        .wrap>div:nth-child(3){
+            margin-right: 0;
+            width: calc((100vw - 20px - 10px)/2)
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="normal-wrap">
+        <div class="wrap">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>

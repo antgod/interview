@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>3PX bug</title>
+    <style>
+        .box {
+            border: 2px solid black;
+        }
+
+        .clear {
+            zoom: 1
+        }
+
+        .clear:after {
+            display: block;
+            clear: both;
+            content: ""
+        }
+
+        .left {
+            width: 100px;
+            height: 300px;
+            float: left;
+            background: red;
+        }
+
+        /*ie6,7下，如果子元素只有一个浮动，会出现3像素bug,解决方法：所有元素都加上浮动*/
+        .rigth {
+            width: 100px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="box clear">
+    <div class="left"></div>
+    <div class="right">
+        当一个元素有一个布局时，它负责对自己和可能的子孙元素进行尺寸计算和定位。简单来说，这意味着这个元素需要花更多的代价来维护自身和里面的内容，而不是依赖于祖先元素来完成这些工作。因此，一些元素默认会有一个布局。当我们说一个元素“拥有layout”或“得到layout”，或者说一个元素“has
+        layout” 的时候，我们的意思是指它的微软专有属性 hasLayout 被设为了 true。一个“layout元素”可以是一个默认就拥有 layout 的元素或者是一个通过设置某些 CSS 属性得到
+        layout的元素。通过 IE Developer Toolbar 可以查看 IE 下 HTML元素是否拥有haslayout，在 IE Developer Toolbar 下，拥有
+        haslayout的元素，通常显示为“haslayout = -1”。
+    </div>
+</div>
+</body>
+</html>

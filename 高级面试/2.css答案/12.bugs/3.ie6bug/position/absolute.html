@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>absolute</title>
+    <style>
+        #box1 {
+            width: 303px;
+            height: 303px;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        #box2 {
+            width: 50px;
+            height: 50px;
+            background: #7c1;
+            position: absolute;
+            right: -1px;
+            bottom: -1px;
+        }
+
+        /*
+            在 IE6 下定位元素的父级宽高都为奇数那么在 IE6 下定位元素的 right 和 bottom 都有1像素的偏差。
+         */
+    </style>
+</head>
+<body>
+<div id="box1">
+    <div id="box2"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>break-row</title>
+    <style>
+        .list {
+            width: 300px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .list li {
+            list-style: none;
+            height: 30px;
+            border: 1px solid #000;
+            font-size: 12px;
+            line-height: 30px;
+            vertical-align: top;
+        }
+
+        .list a {
+            float: left;
+        }
+
+        .list span {
+            float: right;
+        }
+
+        /*
+            IE6，7下li的间隙
+            在IE6，7下li本身没浮动,但是li内容有浮动的时候，li下边就会产生几px的间隙
+            解决办法: 1.给li加浮动
+                2.给li加vertical-align:top;
+        */
+    </style>
+</head>
+<body>
+<ul class="list">
+    <li>
+        <a href="#">文字文字文字文字文字</a>
+        <span>作者</span>
+    </li>
+    <li>
+        <a href="#">文字文字文字文字文字</a>
+        <span>作者</span>
+    </li>
+    <li>
+        <a href="#">文字文字文字文字文字</a>
+        <span>作者</span>
+    </li>
+    <li>
+        <a href="#">文字文字文字文字文字</a>
+        <span>作者</span>
+    </li>
+</ul>
+</body>
+</html>

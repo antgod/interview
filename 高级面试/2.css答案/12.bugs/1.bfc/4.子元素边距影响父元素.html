@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>BFC内相邻的块级盒子边距叠加</title>
+    <style>
+        .r {
+            height: 50px;
+            background: #ddd;
+            overflow: hidden;
+        }
+
+        .c {
+            background: pink;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="r">
+    <div class="c">我是c的子元素</div>
+</div>
+</body>
+</html>

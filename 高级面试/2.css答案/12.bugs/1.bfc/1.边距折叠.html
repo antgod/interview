@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>边距折叠</title>
+    <style>
+        .div1 {
+            width: 150px;
+            height: 50px;
+            background: #ccc;
+            margin-bottom: 50px;
+        }
+
+        .div2 {
+            width: 150px;
+            height: 50px;
+            background: #ccc;
+            margin-top: 50px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<!-- 	Block Formatting Context可以包含内部元素的浮动,如果container不是bfc(去掉overflow:hidden)，则内部元素浮动脱离文档流 -->
+<div class="div1">div1</div>
+<div class="div2">div2</div>
+</body>
+</html>
+
+ 
+

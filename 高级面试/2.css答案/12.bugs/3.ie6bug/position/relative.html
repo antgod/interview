@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>relative</title>
+    <style>
+        #box1 {
+            width: 500px;
+            height: 300px;
+            background: blue;
+            overflow: hidden;
+        }
+
+        #box2 {
+            width: 300px;
+            height: 500px;
+            background: yellow;
+            position: relative;
+        }
+
+        /*
+            ie6 下父级的overflow:hidden;是包不住子级的相对定位的
+         */
+    </style>
+</head>
+
+<body>
+<div id="box1">
+    <div id="box2"></div>
+</div>
+</body>
+</html>

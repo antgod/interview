@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+//        函数声明（缩写为FD）是这样一种函数：
+//        有一个特定的名称
+//        在源码中的位置：要么处于程序级（Program level），要么处于其它函数的主体（FunctionBody）中
+//        在进入上下文阶段创建
+//        影响变量对象
+//        以下面的方式声明
+
+        function exampleFunc() {}
+
+//        函数表达式（缩写为FE）是这样一种函数：
+//        在源码中须出现在表达式的位置
+//        有可选的名称
+//        不会影响变量对象
+//        在代码执行阶段创建
+
+        var foo = function () {};
+
+        // 圆括号（分组操作符）内只能是表达式
+        (function foo() {});       //函数表达式
+
+        // 在数组初始化器内只能是表达式
+        [function bar() {}];       //函数表达式
+
+        // 逗号也只能操作表达式
+        1, function baz() {};      //函数表达式
+
+
+
+        // FE在定义阶段之前不可用（因为它是在代码执行阶段创建）
+
+//        alert(foo); // "foo" 未定义
+//
+//        (function foo() {});
+
+        // 定义阶段之后也不可用，因为他不在变量对象VO中
+
+//        alert(foo);  // "foo" 未定义
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

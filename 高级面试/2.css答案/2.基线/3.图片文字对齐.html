@@ -40,15 +40,25 @@
         .wrap img:nth-child(5) {
             vertical-align: top;
         }
+
+        .wrap span {
+            line-height: 20px;
+            vertical-align: baseline;
+        }
     </style>
 </head>
 <body>
     <div class="wrap">
-        <img src="bg.gif"/>aa
-        <img src="bg.gif"/>aa
-        <img src="bg.gif"/>aa
-        <img src="bg.gif"/>aa
-        <img src="bg.gif"/>aa
+        <img src="bg.gif"/>bottom
+        <img src="bg.gif"/>text-top
+        <img src="bg.gif"/>middle
+        <img src="bg.gif"/>text-bottom
+        <img src="bg.gif"/>top
+
+        <!-- 默认对齐方式,图片与文字的基线对齐 -->
+        <img src="bg.gif"/>baseline
+        <!-- 文字的基线与父元素基线对齐 -->
+        <span>text</span>
     </div>
 </body>
 </html>

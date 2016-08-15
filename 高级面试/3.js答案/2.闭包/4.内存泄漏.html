@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>closures-事件.html</title>
+    <script type="text/javascript">
+        //闭包在 IE 的这些版本中会导致一些特殊的问题。具体来说，如果闭包的作用域链中保存着一个
+        //HTML 元素，那么就意味着该元素将无法被销毁。
+
+        function assignHandler() {
+            var element = document.getElementById("someElement");
+            element.onclick = function () {
+                alert(element.id);
+            };
+        }
+
+        //而这个闭包则又创建了一个循环引用）。由于匿名函数保存了一个对 assignHandler()
+        //的活动对象的引用，因此就会导致无法减少 element 的引用数。只要匿名函数存在，
+        //element 的引用数至少也是 1，因此它所占用的内存就永远不会被回收。不过，这个问题
+        //可以通过稍微改写一下代码来解决。
+        function assignHandler(){
+            var element = document.getElementById("someElement");
+            var id = element.id;
+
+            element.onclick = function(){
+                alert(id);
+            };
+
+            element = null;
+        }
+
+    </script>
+</head>
+<body>
+</body>
+</html>

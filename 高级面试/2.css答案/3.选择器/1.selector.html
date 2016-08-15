@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.children > div:first-child:nth-last-child(n+4) {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<!--取父元素下，如果元素个数大于4，取倒数第4+个元素里的第一个元素，如果该元素是div，命中。-->
+<!--如果不元素个数小于5，或者倒数第4+个里的第一个元素不是div，不命中任何元素-->
+<div>
+    <div class="children">
+        <div>test</div>
+        <p>test</p>
+        <div>test</div>
+        <div>test</div>
+        <div>test</div>
+        <div>test</div>
+        <div>test</div>
+    </div>
+</div>
+</body>
+</html>

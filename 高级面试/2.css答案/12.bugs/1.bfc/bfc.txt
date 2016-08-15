@@ -1,0 +1,35 @@
+一.block formatting contexts简称bfc，在文章提到的bfc均为此缩写。在可视化格式模型中（用户代理如何处理文档树，视觉媒体），bfc饰演相当重
+要的角色。这样形容bfc，它能把一个集合中的float,margin,clear等等的各种元素包裹，形成的一个集合就为bfc,bfc中的任何都不会对bfc外的元素产生
+影响。
+
+二.形成BFC最少满足以下提到的其中一个：
+1.Float值不为"none"; 
+2.Overflow的值不为"visible";
+3.Display的值为"table-cell","table-caption",或者"inline-block";
+4.Position的值不为"static"或"relative"。
+
+三.触发bfc有许多情况，包括：
+1.浮动float 
+2.绝对定位对象absolute 
+3.Display:inline-block Table-cells Table-captions
+
+四.在各种触发bfc的情况中，要注意以下触发： 
+1.虽然在定义中Position:fixed也能形成bfc，但是fixed定位是absolute定位的一个子类，这意味着在引用一个绝对定位对象形成bfc即已经包括了
+fixed和absolute。 
+2.Display:table本身不会形成bfc，但它可以产生匿名盒子，其中的一些盒子(display:table-cell)能形成新的bfc，换句话说，触发bfc的是匿
+名盒子而不是display:table。这点应该牢记于心，因为虽然它们都能形成新的bfc，但要清楚知道不是display:table形成bfc而是
+display:table-cell形成的。 
+3.最后提到的是控件元素。奇怪的是在html5规范之前在w3c没有关于它们的信息。提到它们的是浏览器bugs而不是官方的。实际上，尽管控件元素在许多浏览器
+中能形成新的bfc，但使用者不应该把这视为理所当然的。（css2.1没有对表单控制和框架定义任何属性，不同浏览器的用户代理可能对它应用不同的css属性，使
+用者应该进行试验）
+
+五.Bfc的形成有什么作用？ 
+1.Block Formatting Context可以阻止边距折叠（margin collapsing）。我们知道在一般情况下，两个上下相邻的盒子会折叠它们垂直方向接触
+到的边距，这种情况只会发生在同一个Block Formatting Context中。换句话说，在同一个布局环境中（Block Formatting Context）是边距
+折叠的必要条件。这也就是为什么浮动的元素和绝对定位元素不会发生边距折叠的原因（当然还有很多种情况也不会折叠）。 
+2.Block Formatting Context可以包含内部元素的浮动。 
+3.Block Formatting Context可以阻止元素被浮动覆盖。
+4.Block Formatting Context可以阻止子元素边距不生效。
+
+六.值得一提的是，hasLayout与bfc非常相似，在ie的旧版本中hasLayout就是为了形成bfc，使用overflow:hidden;zoom:1;在渲染上与bfc
+是非常相似的-给对象一个层去防止边距折叠，去包含浮动，去阻止被浮动覆盖。

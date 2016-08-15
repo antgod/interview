@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>脱离文档流</title>
+    <style>
+        .container {
+            background: silver;
+            overflow: hidden;
+            width: 300px;
+        }
+
+        .container span {
+            background: gray;
+        }
+
+        .container .normal {
+            width: 150px;
+            height: 50px;
+            background: dimgray;
+        }
+
+        .container .float {
+            float: left;
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+<!-- 	Block Formatting Context可以包含内部元素的浮动,如果container不是bfc(去掉overflow:hidden)，则内部元素浮动脱离文档流 -->
+<div class="container">
+    <span>simple text</span> 
+    <div class="normal">in flow</div>
+    <div class="float">float:left</div>
+</div>
+</body>
+</html>
+
+ 
+

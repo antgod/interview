@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>haslayout</title>
+    <style>
+        .parent {
+            line-height: 1;
+            font-size: 14px;
+            border: solid 1px yellow;
+        }
+
+        .child {
+            font-size: 30px;
+            vertical-align: middle;
+            border: solid 1px blue;
+        }
+
+        .inline-block {
+            display: inline-block;
+            overflow: hidden;
+            border: solid 1px red;
+        }
+
+        .other {
+            border: solid 1px green;
+        }
+    </style>
+</head>
+<body>
+<span class="parent">
+  <span class="child">
+    <span class="inline-block">display:inline-block元素</span>
+    xp子元素的文字
+  </span>
+  xp父元素的文字
+</span>
+<div class="other">其他元素</div>
+</body>
+</html>

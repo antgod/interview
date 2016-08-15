@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>min-height</title>
+    <style>
+        /*IE6最小高度小于19像素，都会当做19像素处理，解决办法，overflow:hidden*/
+        .box {
+            height: 1px;
+            background: red;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>

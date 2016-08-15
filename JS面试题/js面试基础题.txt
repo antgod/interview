@@ -1,0 +1,38 @@
+JS
+	DOM元素，setAttribute与.xxx的区别，children和childNodes区别，如何获得的节点名称和节点类型，如何获得浏览器宽高，如何获得当前元素相对于浏览器的位置，如何清空元素下所有元素，Attribute和Property的区别？
+
+	EVENT：事件机制，如何阻止冒泡，阻止默认事件。事件函数内，如何获得当前元素，事件源，事件类型，事件触发按钮和鼠标坐标？不同浏览器的区别。
+
+	数据类型，加载脚本形式（延迟，异步，按需），缓存，跳出三层循环，鼠标位置，冒泡对象获取。
+
+	判断：如何判断对象\元素，说出instanceof和typeof和toString的区别。
+
+	跨域：如何跨一级域、二级域，有多少种方法，HTML5新增了哪些方法？
+
+	闭包：特点、用来解决什么问题，缺点，如何解决缺点
+
+	oop，object上定义了什么方法，如何判断某个对象有没有某个属性，是不是自身的属性。如何创建对象，继承，this指向,__proto__与prototype，constructor,arguments的关系与指向。
+
+	运动动画/浏览器兼容/数组去重/效率/封装框架/
+
+	函数表达式，块级作用域（模仿），私有变量，重载
+
+	前端框架、库，UI库，组件用过哪些
+
+	前端前沿技术，以下技术你用过哪些？html5,css3,commonjs,requirejs,nodejs,grunt,bootstrap,backbone，Amaze，JQUI，magic
+
+	简述你了解的效率优化方案\软件\数据可视化\ajax请求步骤
+
+	XSS脚本攻击，图表技术，SVG\CANVAS技术
+
+	jquery熟悉程度怎样，如何实现。jq选择器返回的是什么？jq为什么没有实例化就能获取对象？
+
+	jq向上查找，向下查找，动画，4种事件区别
+
+	jq队列，ajax回拽方法
+
+	jq ajax ajaxform ajaxsubmit。请求终止。
+
+	动画修改宽高会触发重排吗？
+
+	两个域下面都有同名键cookie,Cookie.get会取哪个域下面的值
