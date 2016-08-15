@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>arguments_rewrite</title>
+		<script type="text/javascript">
+			//参数是值传递的，函数内部obj与person引用同一个对象，当函数内部对参数进行重写，这个变量引用一个局部对象
+			function setName(obj){
+				obj.name="abc";
+				obj=new Object();
+				obj.name="xyz";				
+			}
+			
+			var person=new Object();
+			person.name="lhj";
+			setName(person);
+			alert(person.name);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
