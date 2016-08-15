@@ -218,24 +218,29 @@
 
 1. 描述Node.js的内存泄漏的原因
 1. Node作为后端的项目，一般如何保证其正常的运作
+
     1. 服务器负载以及down掉重启
     2. 日志系统：完备的请求以及异常日志
     3. 良好的结构分层与路由系统设计
     4. 注意中间件的使用时机
     5. 不要出现全局进程处理
 1. 怎么在Node里实现一个类似php里的sleep()函数？
+
     ```
     function sleep(sleepTime) {
         for(var start = +new Date; +new Date - start <= sleepTime; )         { }
     }
     ```
 1. Node 自诩异步编程是它的优势，为什么在引用外部包的时候（require()函数）是同步方法，而非异步方法
+
     如果是异步方法，不能保证加载顺序，使用时候，可能没有加载完毕导致使用变量报错。
 1. Node 里有readFile和对应的同步方法readFileSync，但http.get() 却没有 http.getSync()，如果要实现一个http.getSync()，怎么做？
+
     http.get采用EventEmitter实现。复制http.get函数，不采用事件发射器而返回一个闭包函数，函数参数传递req,res对象即可。
 1. Node中事件与浏览器中事件的区别
 1. Node require机制
 1. 常用的npm包有哪些?
+
     config,tiny-cookie,csv,delegates,injecting,minimist,noflux,readline,request,restify_client,restify_server,superagent,moment,vinyl-fs等
 
 ## 移动端
@@ -279,6 +284,7 @@
     ```
 
 1. 浏览器内核有哪些？
+
     Trident,Gecko,Webkit,Blink,X5,Chromium
 
 ## Http
@@ -301,6 +307,7 @@
 
 1. 发起网络请求过程
 1. 说出常用的状态码，302与304/502与503/100与101的区别？哪些请求是失败的？
+
     301:永久转发
     302:临时转发
     304:客户端重定向
@@ -312,6 +319,7 @@
     101——客户要求服务器根据请求转换HTTP协议版本
 
 1. 说出常用的头部字段
+
     Content-type
     Content-length
     Accept
@@ -352,10 +360,10 @@
 ## 工程化
 
 1. 你常用哪些构建工具？优缺点是什么
-    1.fis：模块化、发布部署、资源定位等集成解决方案，0配置即可使用
-    2.gulp：基于流的快速的文件操作功能，主要用来代码检查，构建，编译，可以定制任务。过于依赖插件，除了构建，其他方面几乎没有。
-    3.webpack：模块化、服务器、编译、打包、部署等功能。缺点是模块化代码过于复杂，没用的代码较多，需借助sourcemap工具调试。
-    4.yeoman：结合了grunt,bower,yo的工具，用来生成项目结构、编译、图片优化、单元测试等。
+    1. fis：模块化、发布部署、资源定位等集成解决方案，0配置即可使用
+    2. gulp：基于流的快速的文件操作功能，主要用来代码检查，构建，编译，可以定制任务。过于依赖插件，除了构建，其他方面几乎没有。
+    3. webpack：模块化、服务器、编译、打包、部署等功能。缺点是模块化代码过于复杂，没用的代码较多，需借助sourcemap工具调试。
+    4. yeoman：结合了grunt,bower,yo的工具，用来生成项目结构、编译、图片优化、单元测试等。
 
 1. webpack模块化与browerify区别，工程中Webpack中作用
     1. webpack大而全，缺点是生成文件太烂，底层设计不透明。
