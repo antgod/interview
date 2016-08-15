@@ -95,6 +95,7 @@
 1. 详细描述this指向, var $=document.querySelector;var queryButton=$('#queryButton');运行这句话,会有什么结果?如果修改其中的bug
 1. javascript参数是值传递还是引用传递?实参与形参是两个变量还是一个变量?
 1. 如何判断属性是否是对象自身的属性,如何判断属性是否是原型链的属性?
+
     ```
     function hasPrototypeProperty(object,name){
         return !object.hasOwnProperty(name)&&(name in object);
@@ -102,13 +103,15 @@
     ```
 1. 描述下的垃圾回收机制
 1. Promise是如何实现的?同步与异步如何处理？
+
     ```
     Promise.all,Promise.reduce,使用发布订阅实现
     ```
 1. 写出你知道的移动端所有事件（PC事件除外），以及触发关系，并且写出如何消除300ms延迟
-    touchstart->touchmove->touchend->click
-    原生：使用touchstart事件代替click事件
-    使用fastclick,tap事件（处理点击穿透）
+
+    1. touchstart->touchmove->touchend->click
+    1. 原生：使用touchstart事件代替click事件
+    1. 使用fastclick,tap事件（处理点击穿透）
 
 1. 描述下es6解构赋值,箭头函数,generator,模块化
     口述即可
@@ -128,9 +131,13 @@
 ## JS编码题
 1. 编写函数add，使得console.log(add(1)(2))输出3，console.log(add(1)(2)(3))输出6
 1. 编写"123456789"转化成"$123,456,789"的转换函数
+
+    ```
     var re = /(?=(?!\b)(\d{3})+$)/g;
+    ```
 1. 输出什么内容,如果把var换成let会怎样？
 
+    ```
 	var a=1;
 	function f(){
 		console.log(this.a+a);
@@ -138,18 +145,21 @@
 		console.log(this.a+a);
 	}
 	f();
-
+    ```
 1. 输出什么内容？
 
+    ```
 	function f1(){console.log(this.a);}
 	function f2(){this.a=1;}
 	f2.prototype.a=2;
 	f2.a=3;
 	f1.call(f2)
 	f1.call(new f2);
+	```
 
 1. 问题1：用户点击页面，输出什么内容？问题2：next回调取自于参数，参数fn2已经存在闭包内,应该执行哪个函数，为什么？
 
+    ```
 	//因为click事件句柄引用了next参数，所以fn函数不会被销毁，内存中生成了两个fn函数的作用域
 
 	var fn=(function(){
@@ -177,10 +187,12 @@
 
 	fn(fn1);
 	fn(fn2);
+	```
 
 1. 编写函数，实现isType('number')(15)返回true，其中number,15为变量,然后实现生成检测函数的函数，如isNumber(15)返回true。
 类似题：编写函数isnumber(15)返回true,实现类似功能。
 
+    ```
     //原题
 	var isType=function(type){
 	    var temp=function(value){
@@ -198,7 +210,7 @@
 	       }
 	   })(types[i])
 	}
-
+    ```
 
 ## Node
 
