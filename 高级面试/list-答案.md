@@ -159,6 +159,36 @@
 	f1.call(new f2);
 	```
 
+1. 输出什么内容
+
+    ```
+    var F=(function(){
+		var self;
+		function A(name){
+			if(!self){
+				self=this;
+			}
+
+			self.name=name;
+			return self;
+		}
+
+		A.prototype.say=function(name){
+			document.write(this.name+":"+name+"<br/>");
+		}
+
+		return A;
+	});
+
+	var A=F();
+	var a=new A("A");
+	var b=new A("B");
+	a.say("A");		//this.name=a对象.name=self.name=B
+	b.say("B");		//this.name=b对象.name=self.name=B
+	document.write(a==b);	//a对象=b对象=self
+
+	```
+
 1. 问题1：用户点击页面，输出什么内容？问题2：next回调取自于参数，参数fn2已经存在闭包内,应该执行哪个函数，为什么？
 
     ```
