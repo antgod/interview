@@ -36,7 +36,6 @@ background-* outline-* box-shadow-border-radius
 8.web animations
 http://web.jobbole.com/82106/
 
-9.smoothness timing
 
 
 
