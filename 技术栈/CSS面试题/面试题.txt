@@ -1,0 +1,95 @@
+## html与xhtml区别
+- XHTML 元素必须被正确地嵌套。
+- XHTML 元素必须被关闭。
+- 标签名必须用小写字母。
+- XHTML 文档必须拥有根元素。
+
+## 行元素与块级元素
+　　	块级元素
+	<address>	information on author
+	<blockquote>	long quotation
+	<button>	push button
+	<caption>	table caption
+	<dd>	definition description
+	<del>	deleted text
+	<div>	generic language/style container
+	<dl>	definition list
+	<dt>	definition term
+	<fieldset>	form control group
+	<form>	interactive form
+	<h1>	heading
+	<h2>	heading
+	<h3>	heading
+	<h4>	heading
+	<h5>	heading
+	<h6>	heading
+	<hr>	horizontal rule
+	<iframe>	inline subwindow
+	<ins>	inserted text
+	<legend>	fieldset legend
+	<li>	list item
+	<map>	client-side image map
+	<noframes>	alternate content container for non frame-based rendering
+	<noscript>	alternate content container for non script-based rendering
+	<object>	generic embedded object
+	<ol>	ordered list
+	<p>	paragraph
+	<pre>	preformatted text
+	<table>	table
+	<tbody>	table body
+	<td>	table data cell
+	<tfoot>	table footer
+	<th>	table header cell
+	<thead>	table header
+	<tr>	table row
+	<ul>	unordered list
+	 行内元素
+		
+	<a>	anchor
+	<abbr>	abbreviated form
+	<acronym>	acronym
+	<b>	bold text style
+	<bdo>	I18N BiDi over-ride
+	<big>	large text style
+	<br>	forced line break
+	<button>	push button
+	<cite>	citation
+	<code>	computer code fragment
+	<del>	deleted text
+	<dfn>	instance definition
+	<em>	emphasis
+	<i>	italic text style
+	<iframe>	inline subwindow
+	<img>	Embedded image
+	<input>	form control
+	<ins>	inserted text
+	<kbd>	text to be entered by the user
+	<label>	form field label text
+	<map>	client-side image map
+	<object>	generic embedded object
+	<q>	short inline quotation
+	<samp>	sample program output, scripts, etc.
+	<select>	option selector
+	<small>	small text style
+	<span>	generic language/style container
+	<strong>	strong emphasis
+	<sub>	subscript
+	<sup>	superscript
+	<textarea>	multi-line text field
+	<tt>	teletype or monospaced text style
+	<var>	instance of a variable or program argument
+
+	
+## 几种doctype的不同
+- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+	该 DTD 包含所有 HTML 元素和属性，但不包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。
+- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	该 DTD 包含所有 HTML 元素和属性，包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。
+- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+	XHTML 1.0 规定了三种 XML 文档类型：Strict、Transitional 以及 Frameset。•XHTML Strict DTD
+	该 DTD 等同于 HTML 4.01 Transitional，但允许框架集内容。
+
+　　
+
+
+　　
