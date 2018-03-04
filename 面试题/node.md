@@ -1,25 +1,20 @@
-8.node,你所用过的框架，简述jade和ejs优缺点对比。
-尽可能说出你知道的node模块和commonjs规范
-请阐述下node的事件机制与浏览器事件机制区别
-
-
-koa/thinkjs yield/async的co实现
-sql事务，CRUD，innoDb锁表锁行，ACID数据库4个特性
-websocket的特性，降级，以及tcp握手
-如何处理gbk
-node环境的工具webpack/babel调试，express/koa服务器的调试
-
-
-koa、express 等框架的架构设计是怎样的
-谈一下对 koa、express 等框架中间件思想的理解
-谈一下 Nodejs 服务端框架分层思想
-Nodejs 常用的模块、库有哪些，原理和实现思路是什么？
-Nodejs 的调试方法有哪些
-目前公司 Node 层架构设计如何？这样设计解决的问题是什么
-谈一下大型服务器架构、分布式架构、服务治理的理解
-get/post 请求的区别是什么
-cookie、session的作用及区别、两者分别的失效控制
-谈一下 nginx 的简单配置，对代理和反向代理的理解，CDN 以及 GSLB/lvs 实现负载均衡的理解
-服务端运维常用的一些命令，比如 top/load average 服务器压力评估
-http 请求的几种返回状态，302 跳转的实现原理
-数据库分库分表所解决的问题是什么？
+- node,你所用过的框架，简述jade和ejs优缺点对比。
+- 尽可能说出你知道的node模块和commonjs规范
+- 请阐述下node的事件机制与浏览器事件机制区别
+- koa/thinkjs yield/async的co实现
+- sql事务，CRUD，innoDb锁表锁行，ACID数据库4个特性
+- websocket的特性，降级，以及tcp握手
+- node环境的工具webpack/babel调试，express/koa服务器的调试
+- koa、express 等框架的架构设计是怎样的
+- 谈一下对 koa、express 等框架中间件思想的理解
+- 谈一下 Nodejs 服务端框架分层思想
+- Nodejs 常用的模块、库有哪些，原理和实现思路是什么？
+- Nodejs 的调试方法有哪些
+- 目前公司 Node 层架构设计如何？这样设计解决的问题是什么
+- 谈一下大型服务器架构、分布式架构、服务治理的理解
+- get/post 请求的区别是什么
+- cookie、session的作用及区别、两者分别的失效控制
+- 谈一下 nginx 的简单配置，对代理和反向代理的理解，CDN 以及 GSLB/lvs 实现负载均衡的理解
+- 服务端运维常用的一些命令，比如 top/load average 服务器压力评估
+- http 请求的几种返回状态，302 跳转的实现原理
+- 数据库分库分表所解决的问题是什么？
