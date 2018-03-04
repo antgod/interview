@@ -1,16 +1,6 @@
 # 基础
-作用域理解等】ES6方面，const、let的区别，const声明的值能否修改？ 
-基础考点：let变量提升、块级作用域的特征，这个必须答出，答不出扣-10分
-一阶考点：const声明的值，如果是对象（json、数组等），无法重新赋值，但可以修改内部的引用，答不出扣-5分
-二阶考点：可关联的其他考察点，你说了引用/指针/内存等关键词，能和我说说这是什么东西么？
-null 和undefined的区别？
-基础考点：null是有值，但值是空。undefined是值未定义。
-扩展考点：null typeof是 object。一个特殊的对象类型。
-高阶考点：null可JSON化；他们都是falsy ，不加!比较，永远是false (Boolean(undefined) ->// false, Boolean(null) ->// false)；
-【异步基础】setTimeout(0)，代码是即时执行的么？为什么?
-基础题，答不好扣分
-【Promise特征】Promise API使用的特征：reject与catch与then执行关系；
-基础题，答不好扣分
+- 解释下作用域、作用域链、上下文环境
+- null 和undefined的区别？
 
 # 语言
 接触过几种语言，说出这些语言的本质区别与优缺点、使用场景
