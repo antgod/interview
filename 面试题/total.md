@@ -1,3 +1,12 @@
+# 轻轻愉快的话题作为面试开场
+- 自我介绍+温暖问候
+  - 你好，我是商家与开放组的名风。我们是做支付宝商家（对B的业务的），PC中台项目和nodejs应用比较多。
+  
+- 面试目的陈述
+  - 聪明、乐观、同理心、皮实
+
+- 提醒注意事项
+
 # 常规非技术性问题(HR\HRBP\技术\经理)
 
 - 挑选一个你认为最出色\成就感的项目介绍一下项目中你完成的亮点，你工作遇到最大的挑战以及解决方案
@@ -62,6 +71,20 @@
 - 简述三次握手的过程，最后一次请求是否可以省略，为什么？
 - ping一个网站100ms，http请求返回多少ms
 - https协议抓包如何做？
+
+## Node
+- 为什么用Nodejs,它有哪些特性和缺点？
+- nodejs的模块是如何实现的，为什么会有module、exports、global等变量
+- node是单线程的，如何防止单线程报错退出程序
+- 请阐述下node的事件机制与浏览器事件机制区别
+- node导出模块有哪2种方式，说说它们的区别？
+- 请介绍一下require的模块加载机制
+- next tick和setImmediate的区别是什么
+- webSocket与传统的http有什么优势
+- node环境的工具webpack/babel调试，express/koa服务器的调试
+- 谈一下对 koa、express 等框架中间件思想的理解
+- 请说出常见的前端攻击类型，Cookies如何防范XSS攻击？
+  
 ### 前端与加密
 - 浏览器强缓存和协商缓存是通过什么字段来判断的？ 两者之间有什么区别？
   - http://www.cnblogs.com/wonyun/p/5524617.html
@@ -100,6 +123,14 @@ click300，双击判定，点透，fastclick，touchstart/end preventDefault，d
 - 函数式编程和面向对象编程本质区别是什么
 - 纯函数，尾递归优化
 
+## TS
+- js项目如何升级为ts？有何影响？
+- ts 基础类型都哪些，他们跟js的区别
+- ts为什么会流行？与ECMA新规范的关系？
+- tslint都能配置哪些功能？对开发流程有何影响？
+- 如何使用js实现类型约束，枚举等特性么？
+- 如何理解接口，泛型?
+
 # 样式
 ## 原理
 - css选择器权重计算规则
@@ -135,7 +166,7 @@ click300，双击判定，点透，fastclick，touchstart/end preventDefault，d
 ## 公共
 - 读过哪些框架或者了解过哪些原理
 - 谈谈框架阅读技巧以及收获、产出的文章
-## jquery
+## jquer
 - jquery如何实现defer,ready,init
 ## react
 - react的dom diff原理 
